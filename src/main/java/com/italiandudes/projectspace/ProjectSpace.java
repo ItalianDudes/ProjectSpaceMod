@@ -24,6 +24,7 @@ public class ProjectSpace
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         //Blocks and items are registered here.
+        //Blocks MUST be registered before items are, or MC would crash.
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
