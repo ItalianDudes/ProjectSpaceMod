@@ -34,8 +34,7 @@ credits="Thanks for downloading our mod." #optional
 authors="Hacker6329, SerSapessi and Tia." #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-A mod about space.
-'''
+A mod about space.'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional
     # the modid of the dependency
