@@ -1,6 +1,8 @@
 package com.italiandudes.projectspace;
 
 import com.italiandudes.projectspace.config.ProjectSpaceConfig;
+import com.italiandudes.projectspace.init.ModBlocks;
+import com.italiandudes.projectspace.init.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -20,6 +22,10 @@ public class ProjectSpace
     public ProjectSpace() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        //Blocks and items are registered here.
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         //Configs are registered here!
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ProjectSpaceConfig.SPEC,"projectspace-common.toml");
