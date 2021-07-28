@@ -1,3 +1,4 @@
 {
-  "item.projectspace.battery": "Battery"
+  "item.projectspace.debug_battery": "Debug battery",
+  "itemGroup.projectSpace": "Project Space"
 }

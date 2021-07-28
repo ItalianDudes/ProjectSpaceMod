@@ -2,8 +2,13 @@ package com.italiandudes.projectspace;
 
 import com.italiandudes.projectspace.config.ProjectSpaceConfig;
 import com.italiandudes.projectspace.init.ModBlocks;
+import com.italiandudes.projectspace.init.ModCommand;
 import com.italiandudes.projectspace.init.ModItems;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -37,4 +42,18 @@ public class ProjectSpace
     private void setup(final FMLCommonSetupEvent event){}
 
     private void doClientStuff(final FMLClientSetupEvent event) {}
+
+    //The mod's tab is created here.
+    public static final ItemGroup TAB = new ItemGroup("projectSpace"){
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.DEBUG_BATTERY.get());
+        }
+    };
+
+    //The commands are registered here.
+    @SubscribeEvent
+    public void onCommandRegister(final RegisterCommandsEvent event){
+        ModCommand.registerCommand(event);
+    }
 }
