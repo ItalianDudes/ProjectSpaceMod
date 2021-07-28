@@ -22,6 +22,7 @@ public class Battery extends Item {
         this.charge = charge;
     }
 
+    //This method is called whenever you need to increase the amount of energy stored in the battery
     public int chargeIncrease(double chargeIncrease){
         if((this.charge+chargeIncrease)<this.maxBatteryPower){
             this.charge+=chargeIncrease;
@@ -31,11 +32,16 @@ public class Battery extends Item {
         }
     }
 
+    //This method is called whenever you need to decrease the amount of energy stored in the battery
     public int chargeDecrease(double chargeDecrease){
         if((this.charge>0)&&(this.charge<chargeDecrease)){
-            return -1;
-        }else if(){
-
+            this.charge=0;
+            return -1;  //Operation completed unsuccessfully
+        }else if(this.charge>chargeDecrease){
+            this.charge-=chargeDecrease;
+            return 1;   //Operation completed successfully
+        }else{
+            return 0;   //The battery is already empty
         }
     }
 }
