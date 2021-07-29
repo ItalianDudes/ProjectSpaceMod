@@ -18,4 +18,5 @@ public class ModItems {
 
     //Under here are listed all the block items.
     public static final RegistryObject<Item> QUARRY_BLOCK_ITEM = ITEMS.register("quarry", () -> new BlockItemBase(ModBlocks.QUARRY.get()));
+
 }

@@ -1,10 +1,7 @@
 package com.italiandudes.projectspace;
 
 import com.italiandudes.projectspace.config.ProjectSpaceConfig;
-import com.italiandudes.projectspace.init.ModBlocks;
-import com.italiandudes.projectspace.init.ModCommand;
-import com.italiandudes.projectspace.init.ModItems;
-import com.italiandudes.projectspace.init.ModTileEntityTypes;
+import com.italiandudes.projectspace.init.*;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +32,7 @@ public class ProjectSpace
 
         //Blocks and items are registered here.
         //Blocks MUST be registered before items are, or MC would crash.
+        ModFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModTileEntityTypes.TILE_ENTITY_TYPE.register(bus);
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
