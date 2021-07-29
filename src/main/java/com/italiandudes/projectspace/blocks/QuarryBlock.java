@@ -14,7 +14,9 @@ import javax.annotation.Nullable;
 
 public class QuarryBlock extends Block {
     public QuarryBlock() {
-        super(AbstractBlock.Properties.of(Material.METAL, MaterialColor.COLOR_GRAY).strength(15f)
+        super(AbstractBlock.Properties
+                .of(Material.METAL, MaterialColor.COLOR_GRAY)
+                .strength(15f)
                 .sound(SoundType.METAL));
     }
 
