@@ -4,10 +4,12 @@ import com.italiandudes.projectspace.config.ProjectSpaceConfig;
 import com.italiandudes.projectspace.init.ModBlocks;
 import com.italiandudes.projectspace.init.ModCommand;
 import com.italiandudes.projectspace.init.ModItems;
+import com.italiandudes.projectspace.init.ModTileEntityTypes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -19,18 +21,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("projectspace")
+@Mod.EventBusSubscriber(modid = ProjectSpace.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ProjectSpace
 {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "projectspace";
 
     public ProjectSpace() {
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         //Blocks and items are registered here.
         //Blocks MUST be registered before items are, or MC would crash.
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModTileEntityTypes.TILE_ENTITY_TYPE.register(bus);
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         //Configs are registered here!
