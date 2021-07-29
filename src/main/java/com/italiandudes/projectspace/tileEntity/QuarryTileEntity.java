@@ -18,6 +18,6 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity 
     //This method will run every single time the world ticks!
     @Override
     public void tick() {
-        this.worldPosition.;
+        this.level.setBlock(this.worldPosition.below(),Blocks.AIR.defaultBlockState(),1);
     }
 }
