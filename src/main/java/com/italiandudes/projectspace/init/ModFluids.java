@@ -30,6 +30,6 @@ public class ModFluids {
 
     //Under here are listed all the fluid's properties.
     public static final ForgeFlowingFluid.Properties OXYGEN_PROPERTIES = new ForgeFlowingFluid.Properties(() -> OXYGEN_FLUID.get(), () -> OXYGEN_FLOWING.get(),
-            FluidAttributes.builder(OXYGEN_STILL_RL,OXYGEN_FLOWING_RL).rarity(Rarity.RARE).overlay(OXYGEN_OVERLAY_RL).density(5).luminosity(10).sound(SoundEvents.WATER_AMBIENT))
-            .block(()-> ModBlocks.OXYGEN_BLOCK.get());
+            FluidAttributes.builder(OXYGEN_STILL_RL,OXYGEN_FLOWING_RL).rarity(Rarity.RARE).overlay(OXYGEN_OVERLAY_RL).density(35).luminosity(10).sound(SoundEvents.WATER_AMBIENT)
+                    .viscosity(20)).block(()-> ModBlocks.OXYGEN_BLOCK.get());
 }

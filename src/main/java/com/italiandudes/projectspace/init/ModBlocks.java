@@ -1,6 +1,7 @@
 package com.italiandudes.projectspace.init;
 
 import com.italiandudes.projectspace.ProjectSpace;
+import com.italiandudes.projectspace.blocks.DisplayCaseBlock;
 import com.italiandudes.projectspace.blocks.QuarryBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
@@ -16,6 +17,7 @@ public class ModBlocks {
 
     //Under here are listed all the blocks.
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", () -> new QuarryBlock());
+    public static final RegistryObject<Block> DISPLAY_CASE = BLOCKS.register("display_case", () -> new DisplayCaseBlock());
 
     //Under here are listed all the fluid's blocks.
     public static final RegistryObject<FlowingFluidBlock> OXYGEN_BLOCK = BLOCKS.register("oxygen",

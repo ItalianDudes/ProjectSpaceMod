@@ -35,6 +35,7 @@ public class ProjectSpace
         ModFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModTileEntityTypes.TILE_ENTITY_TYPE.register(bus);
+        ModContainerTypes.CONTAINER_TYPES.register(bus);
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         //Configs are registered here!

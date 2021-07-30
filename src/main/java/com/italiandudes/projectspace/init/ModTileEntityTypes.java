@@ -1,6 +1,7 @@
 package com.italiandudes.projectspace.init;
 
 import com.italiandudes.projectspace.ProjectSpace;
+import com.italiandudes.projectspace.tileEntity.DisplayCaseTileEntity;
 import com.italiandudes.projectspace.tileEntity.QuarryTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
@@ -15,4 +16,6 @@ public class ModTileEntityTypes {
     //Here tileEntities are registered.
     public static final RegistryObject<TileEntityType<QuarryTileEntity>> QUARRY_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
             .register("quarry", () -> TileEntityType.Builder.of(QuarryTileEntity::new, ModBlocks.QUARRY.get()).build(null));
+    public static final RegistryObject<TileEntityType<DisplayCaseTileEntity>> DISPLAY_CASE_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
+            .register("display_case", () -> TileEntityType.Builder.of(DisplayCaseTileEntity::new, ModBlocks.DISPLAY_CASE.get()).build(null));
 }
