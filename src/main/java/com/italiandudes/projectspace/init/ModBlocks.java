@@ -19,5 +19,5 @@ public class ModBlocks {
 
     //Under here are listed all the fluid's blocks.
     public static final RegistryObject<FlowingFluidBlock> OXYGEN_BLOCK = BLOCKS.register("oxygen",
-            () -> new FlowingFluidBlock(ModFluids.OXYGEN_FLUID, Block.Properties.of(Material.WATER).instabreak().noDrops()));
+            () -> new FlowingFluidBlock(() -> ModFluids.OXYGEN_FLUID.get(), Block.Properties.of(Material.WATER).instabreak().noDrops().strength(100.0f)));
 }
