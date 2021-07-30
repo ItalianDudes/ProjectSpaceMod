@@ -2,7 +2,6 @@ package com.italiandudes.projectspace.init;
 
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.blocks.QuarryBlock;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
