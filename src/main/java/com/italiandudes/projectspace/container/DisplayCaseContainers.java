@@ -15,6 +15,7 @@ import net.minecraft.util.IWorldPosCallable;
 
 import java.util.Objects;
 
+//This class manages the container "DisplayCase".
 public class DisplayCaseContainers extends Container {
 
     public final DisplayCaseTileEntity te;

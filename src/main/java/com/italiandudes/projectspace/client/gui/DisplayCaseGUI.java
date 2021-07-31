@@ -11,6 +11,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+//This class manages and sets up the DisplayCaseTileEntity's GUI.
 @OnlyIn(Dist.CLIENT)
 public class DisplayCaseGUI extends ContainerScreen<DisplayCaseContainers> {
 
