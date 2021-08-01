@@ -1,5 +1,7 @@
 {
   "item.projectspace.debug_battery": "Debug battery",
   "block.projectspace.quarry": "Quarry",
+  "item.projectspace.oxygen_bucket": "Oxygen Bucket",
+  "fluid.projectspace.oxygen": "Oxygen",
   "itemGroup.projectSpace": "Project Space"
 }

@@ -14,22 +14,22 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModFluids {
 
+    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, ProjectSpace.MOD_ID);
+
     //Under here are listed all the fluid's resources.
     public static final ResourceLocation OXYGEN_STILL_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/oxygen_still");
     public static final ResourceLocation OXYGEN_FLOWING_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/oxygen_flowing");
     public static final ResourceLocation OXYGEN_OVERLAY_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/oxygen_overlay");
 
-    //This is used to register the class.
-    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, ProjectSpace.MOD_ID);
-
     //Under here are listed all the fluids.
-    public static final RegistryObject<FlowingFluid> OXYGEN_FLUID = FLUIDS.register("oxygen_fluid",
+    public static final RegistryObject<FlowingFluid> OXYGEN_FLUID = FLUIDS.register("oxygen",
             () -> new ForgeFlowingFluid.Source(ModFluids.OXYGEN_PROPERTIES));
     public static final RegistryObject<FlowingFluid> OXYGEN_FLOWING = FLUIDS.register("oxygen_flowing",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.OXYGEN_PROPERTIES));
 
     //Under here are listed all the fluid's properties.
     public static final ForgeFlowingFluid.Properties OXYGEN_PROPERTIES = new ForgeFlowingFluid.Properties(() -> OXYGEN_FLUID.get(), () -> OXYGEN_FLOWING.get(),
-            FluidAttributes.builder(OXYGEN_STILL_RL,OXYGEN_FLOWING_RL).rarity(Rarity.RARE).overlay(OXYGEN_OVERLAY_RL).density(35).luminosity(10).sound(SoundEvents.WATER_AMBIENT)
-                    .viscosity(20)).block(()-> ModBlocks.OXYGEN_BLOCK.get());
+            FluidAttributes.builder(OXYGEN_STILL_RL,OXYGEN_FLOWING_RL).overlay(OXYGEN_OVERLAY_RL).density(1000).luminosity(10).sound(SoundEvents.WATER_AMBIENT)
+                    .viscosity(1000)).block(()-> ModBlocks.OXYGEN_BLOCK.get()).bucket(() -> ModItems.OXYGEN_BUCKET.get());
+
 }
