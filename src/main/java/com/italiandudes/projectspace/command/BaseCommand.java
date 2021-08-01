@@ -4,7 +4,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.Commands;
 
-//This is the model class for the arguments.
+//This is the model class for the arguments of commands.
 public class BaseCommand {
     protected LiteralArgumentBuilder<CommandSource> builder;
     boolean enabled;

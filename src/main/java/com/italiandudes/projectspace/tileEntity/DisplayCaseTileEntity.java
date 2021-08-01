@@ -15,6 +15,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import com.italiandudes.projectspace.container.DisplayCaseContainers;
 
+//This class manages the TileEntity "DisplayCase".
 public class DisplayCaseTileEntity extends LockableLootTileEntity {
 
     public static int slots = 1;

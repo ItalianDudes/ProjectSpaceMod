@@ -8,6 +8,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+//This class lists all the TileEntityTypes in the mod.
 public class ModTileEntityTypes {
 
     public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPE = DeferredRegister

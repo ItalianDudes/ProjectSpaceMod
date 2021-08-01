@@ -8,6 +8,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+//This class lists all the ContainerTypes objects in the mod.
 public class ModContainerTypes {
 
     public static final DeferredRegister<ContainerType<?>> CONTAINER_TYPES = DeferredRegister.create(ForgeRegistries.CONTAINERS, ProjectSpace.MOD_ID);
