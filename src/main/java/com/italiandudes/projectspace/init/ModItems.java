@@ -21,6 +21,6 @@ public class ModItems {
     public static final RegistryObject<Item> QUARRY_BLOCK_ITEM = ITEMS.register("quarry", () -> new BlockItemBase(ModBlocks.QUARRY.get()));
 
     //Under here are listed all the fluid buckets.
-    public static final RegistryObject<BucketItem> OXYGEN_BUCKET = ITEMS.register("oxygen_bucket",
-            () -> new BucketItem(() -> ModFluids.OXYGEN_FLUID.get(), new Item.Properties().tab(ProjectSpace.TAB).stacksTo(1)));
+    public static final RegistryObject<BucketItem> DEBUG_BUCKET = ITEMS.register("debug_bucket",
+            () -> new BucketItem(() -> ModFluids.DEBUG_FLUID.get(), new Item.Properties().tab(ProjectSpace.TAB).stacksTo(1)));
 }

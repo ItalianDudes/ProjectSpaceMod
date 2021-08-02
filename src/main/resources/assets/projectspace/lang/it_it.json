@@ -1,7 +1,7 @@
 {
   "item.projectspace.debug_battery": "Batteria per il debug",
   "block.projectspace.quarry": "Quarry",
-  "item.projectspace.oxygen_bucket": "Secchio di Ossigeno",
-  "fluid.projectspace.oxygen": "Ossigeno",
+  "item.projectspace.debug_bucket": "Secchio di Debug",
+  "fluid.projectspace.debug_fluid": "Fluido di Debug",
   "itemGroup.projectSpace": "Project Space"
 }
