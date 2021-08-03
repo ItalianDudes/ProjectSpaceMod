@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "projectspace:items/debug_bucket"
+    "layer0": "projectspace:items/buckets/debug_bucket"
   }
 }

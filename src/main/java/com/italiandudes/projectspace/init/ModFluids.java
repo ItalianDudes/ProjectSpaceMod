@@ -16,8 +16,8 @@ public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, ProjectSpace.MOD_ID);
 
     //Under here are listed all the fluid's resources.
-    public static final ResourceLocation DEBUG_STILL_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/debug_still");
-    public static final ResourceLocation DEBUG_FLOWING_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/debug_flowing");
+    public static final ResourceLocation DEBUG_STILL_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/still/debug_still");
+    public static final ResourceLocation DEBUG_FLOWING_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/flowing/debug_flowing");
     public static final ResourceLocation DEBUG_OVERLAY_RL = new ResourceLocation(ProjectSpace.MOD_ID,"blocks/fluids/debug_overlay");
 
     //Under here are listed all the fluids.
