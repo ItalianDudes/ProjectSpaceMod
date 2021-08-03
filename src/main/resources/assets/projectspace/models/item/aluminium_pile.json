@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "all": "projectspace:items/resources/piles/aluminium_pile"
+    "layer0": "projectspace:items/resources/piles/aluminium_pile"
   }
 }

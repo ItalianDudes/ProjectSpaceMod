@@ -28,7 +28,7 @@ public class ModItems {
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", SteelIngot::new);
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", TinIngot::new);
     public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", UraniumIngot::new);
-    public static final RegistryObject<Item> ALUMINIUM_NUGGET = ITEMS.register("aluminum_nugget", AluminiumNugget::new);
+    public static final RegistryObject<Item> ALUMINIUM_NUGGET = ITEMS.register("aluminium_nugget", AluminiumNugget::new);
     public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", CopperNugget::new);
     public static final RegistryObject<Item> LEAD_NUGGET = ITEMS.register("lead_nugget", LeadNugget::new);
     public static final RegistryObject<Item> STEEL_NUGGET = ITEMS.register("steel_nugget", SteelNugget::new);
