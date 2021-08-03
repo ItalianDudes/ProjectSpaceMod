@@ -18,6 +18,7 @@ public class DebugBattery extends Item{
     public DebugBattery() {
         super(new Item.Properties()
                 .tab(ProjectSpace.TAB)
+                .stacksTo(1)
         );
     }
 

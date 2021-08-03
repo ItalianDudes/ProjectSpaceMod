@@ -56,6 +56,13 @@ public class ProjectSpace
         }
     };
 
+    public static final ItemGroup RESOURCES_TAB = new ItemGroup("projectSpaceResources") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.ALUMINIUM_INGOT.get());
+        }
+    };
+
     //The commands are registered here.
     @SubscribeEvent
     public void onCommandRegister(final RegisterCommandsEvent event){
