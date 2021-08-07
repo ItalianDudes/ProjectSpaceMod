@@ -3,8 +3,10 @@ package com.italiandudes.projectspace.init;
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.blocks.DisplayCaseBlock;
 import com.italiandudes.projectspace.blocks.QuarryBlock;
+import com.italiandudes.projectspace.blocks.ores.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
+import net.minecraft.block.OreBlock;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,6 +20,11 @@ public class ModBlocks {
     //Under here are listed all the blocks.
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", QuarryBlock::new);
     public static final RegistryObject<Block> DISPLAY_CASE = BLOCKS.register("display_case", DisplayCaseBlock::new);
+    public static final RegistryObject<OreBlock> COPPER_ORE = BLOCKS.register("copper_ore", CopperOre::new);
+    public static final RegistryObject<OreBlock> LEAD_ORE = BLOCKS.register("lead_ore", LeadOre::new);
+    public static final RegistryObject<OreBlock> TIN_ORE = BLOCKS.register("tin_ore", TinOre::new);
+    public static final RegistryObject<OreBlock> URANIUM_ORE = BLOCKS.register("uranium_ore", UraniumOre::new);
+    public static final RegistryObject<OreBlock> BAUXITE_ORE = BLOCKS.register("bauxite_ore", BauxiteOre::new);
 
     //Under here are listed all the fluid's blocks.
     public static final RegistryObject<FlowingFluidBlock> DEBUG_BLOCK = BLOCKS.register("debug_fluid",
