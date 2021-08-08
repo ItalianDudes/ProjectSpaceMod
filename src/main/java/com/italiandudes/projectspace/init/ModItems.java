@@ -1,7 +1,8 @@
 package com.italiandudes.projectspace.init;
 
 import com.italiandudes.projectspace.ProjectSpace;
-import com.italiandudes.projectspace.blocks.BlockItemBase;
+import com.italiandudes.projectspace.blocks.blockItemBases.BlockItemBase;
+import com.italiandudes.projectspace.blocks.blockItemBases.OreBase;
 import com.italiandudes.projectspace.items.CarbonFiber;
 import com.italiandudes.projectspace.items.DebugBattery;
 import com.italiandudes.projectspace.items.GlassFiber;
@@ -45,11 +46,11 @@ public class ModItems {
 
     //Under here are listed all the block items.
     public static final RegistryObject<Item> QUARRY_BLOCK_ITEM = ITEMS.register("quarry", () -> new BlockItemBase(ModBlocks.QUARRY.get()));
-    public static final RegistryObject<Item> BAUXITE_ORE_ITEM = ITEMS.register("bauxite_ore",()->new BlockItemBase(ModBlocks.BAUXITE_ORE.get()));
-    public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore",()->new BlockItemBase(ModBlocks.COPPER_ORE.get()));
-    public static final RegistryObject<Item> LEAD_ORE_ITEM = ITEMS.register("lead_ore",()->new BlockItemBase(ModBlocks.LEAD_ORE.get()));
-    public static final RegistryObject<Item> TIN_ORE_ITEM = ITEMS.register("tin_ore",()->new BlockItemBase(ModBlocks.TIN_ORE.get()));
-    public static final RegistryObject<Item> URANIUM_ORE_ITEM = ITEMS.register("uranium_ore",()->new BlockItemBase(ModBlocks.URANIUM_ORE.get()));
+    public static final RegistryObject<Item> BAUXITE_ORE_ITEM = ITEMS.register("bauxite_ore",()->new OreBase(ModBlocks.BAUXITE_ORE.get()));
+    public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore",()->new OreBase(ModBlocks.COPPER_ORE.get()));
+    public static final RegistryObject<Item> LEAD_ORE_ITEM = ITEMS.register("lead_ore",()->new OreBase(ModBlocks.LEAD_ORE.get()));
+    public static final RegistryObject<Item> TIN_ORE_ITEM = ITEMS.register("tin_ore",()->new OreBase(ModBlocks.TIN_ORE.get()));
+    public static final RegistryObject<Item> URANIUM_ORE_ITEM = ITEMS.register("uranium_ore",()->new OreBase(ModBlocks.URANIUM_ORE.get()));
 
     //Under here are listed all the fluid buckets.
     public static final RegistryObject<BucketItem> DEBUG_BUCKET = ITEMS.register("debug_bucket",

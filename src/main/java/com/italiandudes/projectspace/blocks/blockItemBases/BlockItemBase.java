@@ -1,4 +1,4 @@
-package com.italiandudes.projectspace.blocks;
+package com.italiandudes.projectspace.blocks.blockItemBases;
 
 import com.italiandudes.projectspace.ProjectSpace;
 import net.minecraft.block.Block;
@@ -6,9 +6,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
 public class BlockItemBase extends BlockItem {
-
-    public BlockItemBase(Block blockIn) {
-        super(blockIn, new Item.Properties()
-                .tab(ProjectSpace.TAB));
+    public BlockItemBase(Block block) {
+        super(block, new Item.Properties().tab(ProjectSpace.TAB));
     }
 }

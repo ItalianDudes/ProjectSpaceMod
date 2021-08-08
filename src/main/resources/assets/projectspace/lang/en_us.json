@@ -1,6 +1,11 @@
 {
   "item.projectspace.debug_battery": "Debug battery",
   "block.projectspace.quarry": "Quarry",
+  "block.projectspace.bauxite_ore": "Bauxite ore",
+  "block.projectspace.copper_ore": "Copper ore",
+  "block.projectspace.lead_ore": "Lead ore",
+  "block.projectspace.tin_ore": "Tin ore",
+  "block.projectspace.uranium_ore": "Uranium ore",
   "item.projectspace.debug_bucket": "Debug bucket",
   "item.projectspace.aluminium_ingot": "Aluminium Ingot",
   "item.projectspace.copper_ingot": "Copper ingot",
