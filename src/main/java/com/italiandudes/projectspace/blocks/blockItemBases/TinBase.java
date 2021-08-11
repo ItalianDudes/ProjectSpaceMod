@@ -5,8 +5,15 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
-public class OreBase extends BlockItem {
-    public OreBase(Block block) {
+public class TinBase extends BlockItem {
+    //Can this item be analized inside the analizers?
+    final boolean canBeAnalized = true;
+
+    public TinBase(Block block ) {
         super(block, new Item.Properties().tab(ProjectSpace.RESOURCES_TAB));
+    }
+
+    boolean getCanBeAnalized(){
+        return canBeAnalized;
     }
 }
