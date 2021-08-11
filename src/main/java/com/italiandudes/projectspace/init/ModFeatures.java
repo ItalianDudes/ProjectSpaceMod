@@ -12,11 +12,11 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 public class ModFeatures {
 
     public static void addOres(final BiomeLoadingEvent event){
-        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.BAUXITE_ORE.get().defaultBlockState(),13,0,64,100);
-        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.LEAD_ORE.get().defaultBlockState(),13,0,64,100);
-        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.URANIUM_ORE.get().defaultBlockState(),13,0,64,100);
-        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.COPPER_ORE.get().defaultBlockState(),13,0,64,100);
-        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TIN_ORE.get().defaultBlockState(),13,0,64,100);
+        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.BAUXITE_ORE.get().defaultBlockState(),13,0,64,0);
+        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.LEAD_ORE.get().defaultBlockState(),13,0,64,0);
+        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.URANIUM_ORE.get().defaultBlockState(),13,0,64,0);
+        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.COPPER_ORE.get().defaultBlockState(),13,0,64,0);
+        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TIN_ORE.get().defaultBlockState(),13,0,64,0);
     }
 
     public static void addOre(final BiomeLoadingEvent event, RuleTest rule, BlockState state, int veinSize, int minHeight, int maxHeight, int rarity){
