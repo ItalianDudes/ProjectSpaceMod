@@ -6,6 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -41,6 +42,7 @@ public class ProjectSpace
         //Configs are registered here!
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ProjectSpaceConfig.SPEC,"projectspace-common.toml");
 
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, ModFeatures::addOres);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
