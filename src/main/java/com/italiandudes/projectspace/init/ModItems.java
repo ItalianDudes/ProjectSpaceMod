@@ -50,6 +50,12 @@ public class ModItems {
     public static final RegistryObject<Item> LEAD_ORE_ITEM = ITEMS.register("lead_ore",()->new LeadBase(ModBlocks.LEAD_ORE.get()));
     public static final RegistryObject<Item> TIN_ORE_ITEM = ITEMS.register("tin_ore",()->new TinBase(ModBlocks.TIN_ORE.get()));
     public static final RegistryObject<Item> URANIUM_ORE_ITEM = ITEMS.register("uranium_ore",()->new UraniumBase(ModBlocks.URANIUM_ORE.get()));
+    public static final RegistryObject<Item> ALUMINIUM_BLOCK_ITEM = ITEMS.register("aluminium_block",()->new ResourcesItemBase(ModBlocks.ALUMINIUM_BLOCK.get()));
+    public static final RegistryObject<Item> COPPER_BLOCK_ITEM = ITEMS.register("copper_block",()->new ResourcesItemBase(ModBlocks.COPPER_BLOCK.get()));
+    public static final RegistryObject<Item> LEAD_BLOCK_ITEM = ITEMS.register("lead_block",()->new ResourcesItemBase(ModBlocks.LEAD_BLOCK.get()));
+    public static final RegistryObject<Item> TIN_BLOCK_ITEM = ITEMS.register("tin_block",()->new ResourcesItemBase(ModBlocks.TIN_BLOCK.get()));
+    public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block",()->new ResourcesItemBase(ModBlocks.URANIUM_BLOCK.get()));
+    public static final RegistryObject<Item> STEEL_BLOCK_ITEM = ITEMS.register("steel_block",()->new ResourcesItemBase(ModBlocks.STEEL_BLOCK.get()));
 
     //Under here are listed all the fluid buckets.
     public static final RegistryObject<BucketItem> DEBUG_BUCKET = ITEMS.register("debug_bucket",

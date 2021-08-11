@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "projectspace:blocks/resources/blocks/aluminium_block"
+  }
+}
