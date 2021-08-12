@@ -17,7 +17,7 @@ import java.util.Objects;
 @OnlyIn(Dist.CLIENT)
 public class DebugDisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContainers> {
 
-    private static final ResourceLocation DEBUG_DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case.png");
+    private static final ResourceLocation DEBUG_DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case");
 
     public DebugDisplayCaseGUI(DebugDisplayCaseContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
