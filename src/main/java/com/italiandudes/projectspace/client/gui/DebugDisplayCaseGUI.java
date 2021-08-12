@@ -17,7 +17,7 @@ import java.util.Objects;
 @OnlyIn(Dist.CLIENT)
 public class DebugDisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContainers> {
 
-    private static final ResourceLocation DEBUG_DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case");
+    private static final ResourceLocation DEBUG_DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case.png");
 
     public DebugDisplayCaseGUI(DebugDisplayCaseContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
@@ -42,12 +42,13 @@ public class DebugDisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContain
                 4210752);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     protected void renderBg(MatrixStack matrixStack, float partialTick, int mouseX, int mouseY) {
         RenderSystem.color4f(1f,1f,1f,1f);
         Objects.requireNonNull(this.minecraft).textureManager.bind(DEBUG_DISPLAY_CASE_GUI);
-        int x = (this.width - this.height)/2;
-        int y = (this.height - this.width)/2;
-        this.blit(matrixStack,x,y,0,0,this.width,this.height);
+        int x = (this.width - this.getXSize())/2;
+        int y = (this.height - this.getYSize())/2;
+        this.blit(matrixStack,x,y,0,0,this.getXSize(),this.getYSize());
     }
 }
