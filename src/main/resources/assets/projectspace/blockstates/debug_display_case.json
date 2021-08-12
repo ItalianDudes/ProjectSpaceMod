@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "projectspace:block/debug_display_case","y": 270},
+    "facing=south": {"model": "projectspace:block/debug_display_case","y": 90},
+    "facing=east": {"model": "projectspace:block/debug_display_case"},
+    "facing=west": {"model": "projectspace:block/debug_display_case","y":180}
+  }
+}
