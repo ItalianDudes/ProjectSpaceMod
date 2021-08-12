@@ -40,6 +40,10 @@ public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
         return this.items;
     }
 
+    public ItemStack getItem(){
+        return this.items.get(0);
+    }
+
     @Override
     protected void setItems(NonNullList<ItemStack> itemsIn) {
         this.items = itemsIn;
