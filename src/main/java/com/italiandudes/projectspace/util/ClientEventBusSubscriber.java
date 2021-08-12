@@ -14,6 +14,6 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event){
-        ScreenManager.register(ModContainerTypes.DISPLAY_CASE_CONTAINERS_TYPE.get(), DisplayCaseGUI::new);
+        ScreenManager.register(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(), DisplayCaseGUI::new);
     }
 }

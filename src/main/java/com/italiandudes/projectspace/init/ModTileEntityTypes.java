@@ -1,8 +1,8 @@
 package com.italiandudes.projectspace.init;
 
 import com.italiandudes.projectspace.ProjectSpace;
-import com.italiandudes.projectspace.tileEntity.DisplayCaseTileEntity;
-import com.italiandudes.projectspace.tileEntity.QuarryTileEntity;
+import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
+import com.italiandudes.projectspace.tileEntity.DebugQuarryTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,8 +15,8 @@ public class ModTileEntityTypes {
             .create(ForgeRegistries.TILE_ENTITIES, ProjectSpace.MOD_ID);
 
     //Here tileEntities are registered.
-    public static final RegistryObject<TileEntityType<QuarryTileEntity>> QUARRY_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
-            .register("quarry", () -> TileEntityType.Builder.of(QuarryTileEntity::new, ModBlocks.QUARRY.get()).build(null));
-    public static final RegistryObject<TileEntityType<DisplayCaseTileEntity>> DISPLAY_CASE_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
-            .register("display_case", () -> TileEntityType.Builder.of(DisplayCaseTileEntity::new, ModBlocks.DISPLAY_CASE.get()).build(null));
+    public static final RegistryObject<TileEntityType<DebugQuarryTileEntity>> DEBUG_QUARRY_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
+            .register("debug_quarry", () -> TileEntityType.Builder.of(DebugQuarryTileEntity::new, ModBlocks.DEBUG_QUARRY.get()).build(null));
+    public static final RegistryObject<TileEntityType<DebugDisplayCaseTileEntity>> DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
+            .register("debug_display_case", () -> TileEntityType.Builder.of(DebugDisplayCaseTileEntity::new, ModBlocks.DEBUG_DISPLAY_CASE.get()).build(null));
 }

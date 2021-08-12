@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "projectspace:quarry"
+          "name": "projectspace:debug_quarry"
         }
       ]
     }

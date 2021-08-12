@@ -8,13 +8,13 @@ import net.minecraft.tileentity.TileEntityType;
 
 import java.util.Objects;
 
-public class QuarryTileEntity extends TileEntity implements ITickableTileEntity {
-    public QuarryTileEntity(TileEntityType<?> tileEntityTypeIn) {
+public class DebugQuarryTileEntity extends TileEntity implements ITickableTileEntity {
+    public DebugQuarryTileEntity(TileEntityType<?> tileEntityTypeIn) {
         super(tileEntityTypeIn);
     }
 
-    public QuarryTileEntity() {
-        this(ModTileEntityTypes.QUARRY_TILE_ENTITY_TYPE.get());
+    public DebugQuarryTileEntity() {
+        this(ModTileEntityTypes.DEBUG_QUARRY_TILE_ENTITY_TYPE.get());
     }
 
     //This method will run every single time the world ticks!

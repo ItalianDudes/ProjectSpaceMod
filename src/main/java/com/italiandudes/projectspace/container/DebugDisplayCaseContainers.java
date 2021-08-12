@@ -2,7 +2,7 @@ package com.italiandudes.projectspace.container;
 
 import com.italiandudes.projectspace.init.ModBlocks;
 import com.italiandudes.projectspace.init.ModContainerTypes;
-import com.italiandudes.projectspace.tileEntity.DisplayCaseTileEntity;
+import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
@@ -16,13 +16,13 @@ import net.minecraft.util.IWorldPosCallable;
 import java.util.Objects;
 
 //This class manages the container "DisplayCase".
-public class DisplayCaseContainers extends Container {
+public class DebugDisplayCaseContainers extends Container {
 
-    public final DisplayCaseTileEntity te;
+    public final DebugDisplayCaseTileEntity te;
     private final IWorldPosCallable canInteractWithCallable;
 
-    public DisplayCaseContainers(final int windowId, final PlayerInventory playerInv, final DisplayCaseTileEntity te){
-        super(ModContainerTypes.DISPLAY_CASE_CONTAINERS_TYPE.get(),windowId);
+    public DebugDisplayCaseContainers(final int windowId, final PlayerInventory playerInv, final DebugDisplayCaseTileEntity te){
+        super(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(),windowId);
         this.te = te;
         this.canInteractWithCallable = IWorldPosCallable.create(Objects.requireNonNull(te.getLevel()),te.getBlockPos());
 
@@ -42,23 +42,23 @@ public class DisplayCaseContainers extends Container {
         }
     }
 
-    public DisplayCaseContainers(final int windowId, final PlayerInventory playerInv, final PacketBuffer data){
+    public DebugDisplayCaseContainers(final int windowId, final PlayerInventory playerInv, final PacketBuffer data){
         this(windowId,playerInv,getTileEntity(playerInv,data));
     }
 
-    private static DisplayCaseTileEntity getTileEntity(final PlayerInventory playerInventory, final PacketBuffer data){
+    private static DebugDisplayCaseTileEntity getTileEntity(final PlayerInventory playerInventory, final PacketBuffer data){
         Objects.requireNonNull(playerInventory, "Player Inventory cannot be null.");
         Objects.requireNonNull(data,"Packet Buffer cannot be null.");
         final TileEntity te = playerInventory.player.level.getBlockEntity(data.readBlockPos());
-        if (te instanceof DisplayCaseTileEntity){
-            return (DisplayCaseTileEntity) te;
+        if (te instanceof DebugDisplayCaseTileEntity){
+            return (DebugDisplayCaseTileEntity) te;
         }
         throw new IllegalStateException("Tile Entity Is Not Correct");
     }
 
     @Override
     public boolean stillValid(PlayerEntity playerIn) {
-        return stillValid(canInteractWithCallable,playerIn, ModBlocks.DISPLAY_CASE.get());
+        return stillValid(canInteractWithCallable,playerIn, ModBlocks.DEBUG_DISPLAY_CASE.get());
     }
 
     @Override
@@ -68,11 +68,11 @@ public class DisplayCaseContainers extends Container {
         if (slot!=null && slot.hasItem()){
             ItemStack stack1 = slot.getItem();
             stack = stack1.copy();
-            if(index < DisplayCaseTileEntity.slots
-                    && !this.moveItemStackTo(stack1,DisplayCaseTileEntity.slots,this.slots.size(),true)){
+            if(index < DebugDisplayCaseTileEntity.slots
+                    && !this.moveItemStackTo(stack1, DebugDisplayCaseTileEntity.slots,this.slots.size(),true)){
                 return ItemStack.EMPTY;
             }
-            if(!this.moveItemStackTo(stack1,0,DisplayCaseTileEntity.slots,false)){
+            if(!this.moveItemStackTo(stack1,0, DebugDisplayCaseTileEntity.slots,false)){
                 return ItemStack.EMPTY;
             }
 

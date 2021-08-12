@@ -16,8 +16,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ProjectSpace.MOD_ID);
 
     //Under here are listed all the blocks.
-    public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", QuarryBlock::new);
-    public static final RegistryObject<Block> DISPLAY_CASE = BLOCKS.register("display_case", DisplayCaseBlock::new);
+    public static final RegistryObject<Block> DEBUG_QUARRY = BLOCKS.register("debug_quarry", DebugQuarryBlock::new);
+    public static final RegistryObject<Block> DEBUG_DISPLAY_CASE = BLOCKS.register("debug_display_case", DebugDisplayCaseBlock::new);
     public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", CopperOre::new);
     public static final RegistryObject<Block> LEAD_ORE = BLOCKS.register("lead_ore", LeadOre::new);
     public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", TinOre::new);

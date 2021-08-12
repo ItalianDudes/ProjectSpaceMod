@@ -21,7 +21,7 @@
   "item.projectspace.carbon_fiber": "Carbon Fiber",
   "item.projectspace.glass_fiber": "Glass Fiber",
   "item.projectspace.sulfur_dust": "Sulfur Dust",
-  "block.projectspace.quarry": "Quarry",
+  "block.projectspace.debug_quarry": "Quarry",
   "block.projectspace.bauxite_ore": "Bauxite Ore",
   "block.projectspace.copper_ore": "Copper Ore",
   "block.projectspace.lead_ore": "Lead Ore",

@@ -12,8 +12,8 @@ import net.minecraft.world.IBlockReader;
 
 import javax.annotation.Nullable;
 
-public class QuarryBlock extends Block {
-    public QuarryBlock() {
+public class DebugQuarryBlock extends Block {
+    public DebugQuarryBlock() {
         super(AbstractBlock.Properties
                 .of(Material.METAL, MaterialColor.COLOR_GRAY)
                 .strength(15f)
@@ -28,6 +28,6 @@ public class QuarryBlock extends Block {
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return ModTileEntityTypes.QUARRY_TILE_ENTITY_TYPE.get().create();
+        return ModTileEntityTypes.DEBUG_QUARRY_TILE_ENTITY_TYPE.get().create();
     }
 }

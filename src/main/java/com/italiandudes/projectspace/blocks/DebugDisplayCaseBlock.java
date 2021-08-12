@@ -17,10 +17,10 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
-import com.italiandudes.projectspace.tileEntity.DisplayCaseTileEntity;
+import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
 
-public class DisplayCaseBlock extends Block {
-    public DisplayCaseBlock() {
+public class DebugDisplayCaseBlock extends Block {
+    public DebugDisplayCaseBlock() {
         super(AbstractBlock.Properties.of(Material.METAL, MaterialColor.COLOR_GRAY).strength(15f)   //strength = hardnessAndResistance
                 .sound(SoundType.METAL));
     }
@@ -32,7 +32,7 @@ public class DisplayCaseBlock extends Block {
 
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return ModTileEntityTypes.DISPLAY_CASE_TILE_ENTITY_TYPE.get().create();
+        return ModTileEntityTypes.DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE.get().create();
     }
 
     @SuppressWarnings("deprecation")
@@ -41,8 +41,8 @@ public class DisplayCaseBlock extends Block {
                                 Hand handIn, BlockRayTraceResult hit) {
         if (worldIn.isClientSide()){
             TileEntity te = worldIn.getBlockEntity(pos);
-            if (te instanceof DisplayCaseTileEntity){
-                NetworkHooks.openGui((ServerPlayerEntity) player,(DisplayCaseTileEntity) te, pos);
+            if (te instanceof DebugDisplayCaseTileEntity){
+                NetworkHooks.openGui((ServerPlayerEntity) player,(DebugDisplayCaseTileEntity) te, pos);
             }
         }
         return super.use(state, worldIn, pos, player, handIn, hit);

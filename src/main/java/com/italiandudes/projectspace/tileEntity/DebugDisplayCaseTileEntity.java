@@ -13,15 +13,15 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
-import com.italiandudes.projectspace.container.DisplayCaseContainers;
+import com.italiandudes.projectspace.container.DebugDisplayCaseContainers;
 
 //This class manages the TileEntity "DisplayCase".
-public class DisplayCaseTileEntity extends LockableLootTileEntity {
+public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
 
     public static int slots = 1;
     protected NonNullList<ItemStack> items = NonNullList.withSize(slots,ItemStack.EMPTY);
 
-    protected DisplayCaseTileEntity(TileEntityType<?> typeIn){
+    protected DebugDisplayCaseTileEntity(TileEntityType<?> typeIn){
         super(typeIn);
     }
 
@@ -32,7 +32,7 @@ public class DisplayCaseTileEntity extends LockableLootTileEntity {
 
     @Override
     protected Container createMenu(int id, PlayerInventory player) {
-        return new DisplayCaseContainers(id,player,this);
+        return new DebugDisplayCaseContainers(id,player,this);
     }
 
     @Override
@@ -45,8 +45,8 @@ public class DisplayCaseTileEntity extends LockableLootTileEntity {
         this.items = itemsIn;
     }
 
-    public DisplayCaseTileEntity(){
-        this(ModTileEntityTypes.DISPLAY_CASE_TILE_ENTITY_TYPE.get());
+    public DebugDisplayCaseTileEntity(){
+        this(ModTileEntityTypes.DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE.get());
     }
 
     @Override

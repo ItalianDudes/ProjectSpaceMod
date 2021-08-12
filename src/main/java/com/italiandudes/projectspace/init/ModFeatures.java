@@ -1,7 +1,6 @@
 package com.italiandudes.projectspace.init;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.item.Rarity;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -17,7 +16,7 @@ public class ModFeatures {
         addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.LEAD_ORE.get().defaultBlockState(),13,0,64,0);
         addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.URANIUM_ORE.get().defaultBlockState(),13,0,64,0);
         addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.COPPER_ORE.get().defaultBlockState(),13,0,64,0);
-        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TIN_ORE.get().defaultBlockState(),13,0,64, 0);
+        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TIN_ORE.get().defaultBlockState(),13,0,64,0);
     }
 
     public static void addOre(final BiomeLoadingEvent event, RuleTest rule, BlockState state, int veinSize, int minHeight, int maxHeight, int rarity){

@@ -1,7 +1,7 @@
 package com.italiandudes.projectspace.client.gui;
 
 import com.italiandudes.projectspace.ProjectSpace;
-import com.italiandudes.projectspace.container.DisplayCaseContainers;
+import com.italiandudes.projectspace.container.DebugDisplayCaseContainers;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -13,11 +13,11 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 //This class manages and sets up the DisplayCaseTileEntity's GUI.
 @OnlyIn(Dist.CLIENT)
-public class DisplayCaseGUI extends ContainerScreen<DisplayCaseContainers> {
+public class DisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContainers> {
 
-    private static final ResourceLocation DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/display_case.png");
+    private static final ResourceLocation DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case.png");
 
-    public DisplayCaseGUI(DisplayCaseContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
+    public DisplayCaseGUI(DebugDisplayCaseContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
 
         this.leftPos = 0;
