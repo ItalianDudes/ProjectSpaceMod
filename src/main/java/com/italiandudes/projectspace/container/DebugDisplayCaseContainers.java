@@ -32,7 +32,7 @@ public class DebugDisplayCaseContainers extends Container {
         //Main Player Inventory
         for(int row=0; row<3; row++){
             for(int col=0;col<9;col++){
-                this.addSlot(new Slot(playerInv, col+row*9+9,8*col*18,166-(4-row)*18-10));
+                this.addSlot(new Slot(playerInv, col+row*9+9,8+col*18,166-(4-row)*18-10));
             }
         }
 
