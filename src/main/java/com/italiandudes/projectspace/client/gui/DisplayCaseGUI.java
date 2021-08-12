@@ -11,11 +11,13 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import java.util.Objects;
+
 //This class manages and sets up the DisplayCaseTileEntity's GUI.
 @OnlyIn(Dist.CLIENT)
 public class DisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContainers> {
 
-    private static final ResourceLocation DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case.png");
+    private static final ResourceLocation DEBUG_DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case.png");
 
     public DisplayCaseGUI(DebugDisplayCaseContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
@@ -43,7 +45,7 @@ public class DisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContainers> 
     @Override
     protected void renderBg(MatrixStack matrixStack, float partialTick, int mouseX, int mouseY) {
         RenderSystem.color4f(1f,1f,1f,1f);
-        this.minecraft.textureManager.bind(DISPLAY_CASE_GUI);
+        Objects.requireNonNull(this.minecraft).textureManager.bind(DEBUG_DISPLAY_CASE_GUI);
         int x = (this.width - this.height)/2;
         int y = (this.height - this.width)/2;
         this.blit(matrixStack,x,y,0,0,this.width,this.height);
