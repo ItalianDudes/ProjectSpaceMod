@@ -35,6 +35,8 @@ public class DebugDisplayCaseBlock extends Block {
         return ModTileEntityTypes.DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE.get().create();
     }
 
+
+
     @SuppressWarnings("deprecation")
     @Override
     public ActionResultType use(BlockState state, World worldIn, BlockPos pos, PlayerEntity player,

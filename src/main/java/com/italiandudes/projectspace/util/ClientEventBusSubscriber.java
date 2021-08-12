@@ -1,7 +1,7 @@
 package com.italiandudes.projectspace.util;
 
 import com.italiandudes.projectspace.ProjectSpace;
-import com.italiandudes.projectspace.client.gui.DisplayCaseGUI;
+import com.italiandudes.projectspace.client.gui.DebugDisplayCaseGUI;
 import com.italiandudes.projectspace.init.ModContainerTypes;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,6 +14,6 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event){
-        ScreenManager.register(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(), DisplayCaseGUI::new);
+        ScreenManager.register(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(), DebugDisplayCaseGUI::new);
     }
 }

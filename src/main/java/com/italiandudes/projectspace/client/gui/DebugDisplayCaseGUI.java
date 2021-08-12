@@ -15,11 +15,11 @@ import java.util.Objects;
 
 //This class manages and sets up the DisplayCaseTileEntity's GUI.
 @OnlyIn(Dist.CLIENT)
-public class DisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContainers> {
+public class DebugDisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContainers> {
 
     private static final ResourceLocation DEBUG_DISPLAY_CASE_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case.png");
 
-    public DisplayCaseGUI(DebugDisplayCaseContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
+    public DebugDisplayCaseGUI(DebugDisplayCaseContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
 
         this.leftPos = 0;
