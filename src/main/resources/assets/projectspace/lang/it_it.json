@@ -35,5 +35,6 @@
   "block.projectspace.steel_block": "Blocco d'acciaio",
   "fluid.projectspace.debug_fluid": "Fluido di debug",
   "itemGroup.projectSpace": "Project Space",
-  "itemGroup.projectSpaceResources": "Risorse Project Space"
+  "itemGroup.projectSpaceResources": "Risorse Project Space",
+  "container.projectspace.display_case": "Vetrina di debug"
 }
