@@ -41,10 +41,10 @@ public class DebugDisplayCaseBlock extends Block {
     @Override
     public ActionResultType use(BlockState state, World worldIn, BlockPos pos, PlayerEntity player,
                                 Hand handIn, BlockRayTraceResult hit) {
-        if (worldIn.isClientSide()){
+        if (!worldIn.isClientSide()){
             TileEntity te = worldIn.getBlockEntity(pos);
             if (te instanceof DebugDisplayCaseTileEntity){
-                NetworkHooks.openGui((ServerPlayerEntity) player,(DebugDisplayCaseTileEntity) te, pos);
+                NetworkHooks.openGui( (ServerPlayerEntity) player,(DebugDisplayCaseTileEntity) te, pos);
             }
         }
         return super.use(state, worldIn, pos, player, handIn, hit);
