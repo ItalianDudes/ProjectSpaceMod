@@ -2,6 +2,8 @@ package com.italiandudes.projectspace.events;
 
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.init.ModKeyBinds;
+import com.italiandudes.projectspace.network.ProjectSpaceNetwork;
+import com.italiandudes.projectspace.network.packets.InputMessage;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
@@ -32,7 +34,7 @@ public class InputEvents {
     private static void onInput(Minecraft mc, int key, int action){
 
         if(mc.screen != null && ModKeyBinds.exampleKey.isDown()){
-            System.out.println("EXAMPLE KEY PRESSED");
+            ProjectSpaceNetwork.CHANNEL.sendToServer(new InputMessage(key));
         }
 
     }

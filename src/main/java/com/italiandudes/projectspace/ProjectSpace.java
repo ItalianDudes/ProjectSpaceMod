@@ -2,6 +2,7 @@ package com.italiandudes.projectspace;
 
 import com.italiandudes.projectspace.config.ProjectSpaceConfig;
 import com.italiandudes.projectspace.init.*;
+import com.italiandudes.projectspace.network.ProjectSpaceNetwork;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +32,8 @@ public class ProjectSpace
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        bus.addListener(this::commonSetup);
+
         //Blocks and items are registered here.
         //Blocks MUST be registered before items are, or MC would crash.
         ModFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -49,6 +52,10 @@ public class ProjectSpace
     private void setup(final FMLCommonSetupEvent event){}
 
     private void doClientStuff(final FMLClientSetupEvent event) {}
+
+    public void commonSetup(final FMLClientSetupEvent event){
+        ProjectSpaceNetwork.init();
+    }
 
     //The mod's tabs are created here.
     public static final ItemGroup TAB = new ItemGroup("projectSpace"){
