@@ -50,7 +50,7 @@ public class ProjectSpace
 
     private void doClientStuff(final FMLClientSetupEvent event) {}
 
-    //The mod's tab is created here.
+    //The mod's tabs are created here.
     public static final ItemGroup TAB = new ItemGroup("projectSpace"){
         @Override
         public ItemStack makeIcon() {

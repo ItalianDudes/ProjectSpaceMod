@@ -21,6 +21,7 @@
   "item.projectspace.carbon_fiber": "Fibra di carbonio",
   "item.projectspace.glass_fiber": "Fibra di vetro",
   "item.projectspace.sulfur_dust": "Polvere di zolfo",
+
   "block.projectspace.debug_quarry": "Quarry",
   "block.projectspace.bauxite_ore": "Minerale di bauxite",
   "block.projectspace.copper_ore": "Minerale di rame",
@@ -33,8 +34,14 @@
   "block.projectspace.lead_block": "Blocco di piombo",
   "block.projectspace.uranium_block": "Blocco d'uranio",
   "block.projectspace.steel_block": "Blocco d'acciaio",
+
   "fluid.projectspace.debug_fluid": "Fluido di debug",
+
   "itemGroup.projectSpace": "Project Space",
   "itemGroup.projectSpaceResources": "Risorse Project Space",
-  "container.projectspace.display_case": "Vetrina di debug"
+
+  "container.projectspace.display_case": "Vetrina di debug",
+
+  "key.category.projectspace": "Project Space",
+  "key.projectspace.example_key": "Example Key"
 }

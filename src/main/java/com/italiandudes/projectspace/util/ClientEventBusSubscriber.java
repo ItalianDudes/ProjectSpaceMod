@@ -4,6 +4,7 @@ import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.client.gui.DebugDisplayCaseGUI;
 import com.italiandudes.projectspace.client.tileEntityRenderer.DebugDisplayCaseTileEntityRenderer;
 import com.italiandudes.projectspace.init.ModContainerTypes;
+import com.italiandudes.projectspace.init.ModKeyBinds;
 import com.italiandudes.projectspace.init.ModTileEntityTypes;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,6 +18,9 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event){
+
+        ModKeyBinds.register(event);
+
         ScreenManager.register(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(), DebugDisplayCaseGUI::new);
 
         ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE.get(), DebugDisplayCaseTileEntityRenderer::new);

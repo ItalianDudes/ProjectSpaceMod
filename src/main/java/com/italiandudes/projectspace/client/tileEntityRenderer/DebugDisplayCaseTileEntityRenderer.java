@@ -50,6 +50,7 @@ public class DebugDisplayCaseTileEntityRenderer extends TileEntityRenderer<Debug
         renderLabel(matrixStack,buffer,lightLevel,new double[] {.5d,1.3d,.5d}, label,0xffffff);
     }
 
+    //This method renders the item that is contained inside the tile Entity.
     private void renderItem(ItemStack stack, double[] translation, Quaternion rotation, MatrixStack matrixStack, IRenderTypeBuffer buffer,
                             float partialTicks, int combinedOverlay, int lightLevel, float scale){
         matrixStack.pushPose();
@@ -63,6 +64,7 @@ public class DebugDisplayCaseTileEntityRenderer extends TileEntityRenderer<Debug
         matrixStack.popPose();
     }
 
+    //This method renders the label that appears above the rendered item contained inside the tile Entity.
     private void renderLabel(MatrixStack stack, IRenderTypeBuffer buffer, int lightLevel, double[] corner, ITextComponent text,
                              int color){
 

@@ -21,6 +21,7 @@
   "item.projectspace.carbon_fiber": "Carbon Fiber",
   "item.projectspace.glass_fiber": "Glass Fiber",
   "item.projectspace.sulfur_dust": "Sulfur Dust",
+
   "block.projectspace.debug_quarry": "Debug Quarry",
   "block.projectspace.bauxite_ore": "Bauxite Ore",
   "block.projectspace.copper_ore": "Copper Ore",
@@ -33,8 +34,14 @@
   "block.projectspace.lead_block": "Block of Lead",
   "block.projectspace.uranium_block": "Block of Uranium",
   "block.projectspace.steel_block": "Block of Steel",
+
   "fluid.projectspace.debug_fluid": "Debug Fluid",
+
   "itemGroup.projectSpace": "Project Space",
   "itemGroup.projectSpaceResources": "Project Space Resources",
-  "container.projectspace.display_case": "Debug Display Case"
+
+  "container.projectspace.display_case": "Debug Display Case",
+
+  "key.category.projectspace": "Project Space",
+  "key.projectspace.example_key": "Example Key"
 }
