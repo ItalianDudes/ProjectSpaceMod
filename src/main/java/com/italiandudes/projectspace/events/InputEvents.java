@@ -33,7 +33,8 @@ public class InputEvents {
 
     private static void onInput(Minecraft mc, int key, int action){
 
-        if(mc.screen != null && ModKeyBinds.exampleKey.isDown()){
+        if(mc.screen == null && ModKeyBinds.exampleKey.isDown()){
+            System.out.println("EXAMPLE KEY PRESSED");
             ProjectSpaceNetwork.CHANNEL.sendToServer(new InputMessage(key));
         }
 
