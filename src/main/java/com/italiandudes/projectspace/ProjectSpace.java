@@ -5,6 +5,7 @@ import com.italiandudes.projectspace.init.*;
 import com.italiandudes.projectspace.network.ProjectSpaceNetwork;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -33,6 +34,7 @@ public class ProjectSpace
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         bus.addListener(this::commonSetup);
+        bus.addGenericListener(IRecipeSerializer.class,ModRecipes::registerRecipes);
 
         //Blocks and items are registered here.
         //Blocks MUST be registered before items are, or MC would crash.
