@@ -5,7 +5,6 @@ import com.google.gson.JsonObject;
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.init.ModItems;
 import com.italiandudes.projectspace.init.ModRecipes;
-import com.mojang.realmsclient.util.JsonUtils;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
