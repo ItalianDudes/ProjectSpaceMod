@@ -40,7 +40,7 @@
   "itemGroup.projectSpace": "Project Space",
   "itemGroup.projectSpaceResources": "Risorse Project Space",
 
-  "container.projectspace.display_case": "Vetrina di debug",
+  "container.projectspace.debug_display_case": "Vetrina di debug",
 
   "key.category.projectspace": "Project Space",
   "key.projectspace.example_key": "Example Key"

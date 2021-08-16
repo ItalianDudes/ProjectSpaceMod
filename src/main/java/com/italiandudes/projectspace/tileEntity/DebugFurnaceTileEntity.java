@@ -1,6 +1,8 @@
 package com.italiandudes.projectspace.tileEntity;
 
 import com.italiandudes.projectspace.ProjectSpace;
+import com.italiandudes.projectspace.container.DebugDisplayCaseContainers;
+import com.italiandudes.projectspace.container.DebugFurnaceContainers;
 import com.italiandudes.projectspace.init.ModTileEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
@@ -13,26 +15,23 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
-import com.italiandudes.projectspace.container.DebugDisplayCaseContainers;
 
-//This class manages the TileEntity "DisplayCase".
-public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
+public class DebugFurnaceTileEntity extends LockableLootTileEntity {
 
     public static int slots = 1;
     protected NonNullList<ItemStack> items = NonNullList.withSize(slots,ItemStack.EMPTY);
 
-    protected DebugDisplayCaseTileEntity(TileEntityType<?> typeIn){
+    protected DebugFurnaceTileEntity(TileEntityType<?> typeIn) {
         super(typeIn);
     }
 
-    @Override
     protected ITextComponent getDefaultName() {
-        return new TranslationTextComponent("container."+ ProjectSpace.MOD_ID + ".debug_display_case");
+        return new TranslationTextComponent("container."+ ProjectSpace.MOD_ID + ".debug_furnace");
     }
 
     @Override
     protected Container createMenu(int id, PlayerInventory player) {
-        return new DebugDisplayCaseContainers(id,player,this);
+        return new DebugFurnaceContainers(id,player,this);
     }
 
     @Override
@@ -49,7 +48,7 @@ public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
         this.items = itemsIn;
     }
 
-    public DebugDisplayCaseTileEntity(){
+    public DebugFurnaceTileEntity(){
         this(ModTileEntityTypes.DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE.get());
     }
 

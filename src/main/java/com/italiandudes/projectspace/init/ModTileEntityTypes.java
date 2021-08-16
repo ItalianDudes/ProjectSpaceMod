@@ -3,6 +3,7 @@ package com.italiandudes.projectspace.init;
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.blocks.DebugQuarryBlock;
 import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
+import com.italiandudes.projectspace.tileEntity.DebugFurnaceTileEntity;
 import com.italiandudes.projectspace.tileEntity.DebugQuarryTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
@@ -20,4 +21,6 @@ public class ModTileEntityTypes {
             .register("debug_quarry", ()-> TileEntityType.Builder.of(DebugQuarryTileEntity::new, ModBlocks.DEBUG_QUARRY.get()).build(null));
     public static final RegistryObject<TileEntityType<DebugDisplayCaseTileEntity>> DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
             .register("debug_display_case", () -> TileEntityType.Builder.of(DebugDisplayCaseTileEntity::new, ModBlocks.DEBUG_DISPLAY_CASE.get()).build(null));
+    public static final RegistryObject<TileEntityType<DebugFurnaceTileEntity>> DEBUG_FURNACE_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
+            .register("debug_furnace", ()-> TileEntityType.Builder.of(DebugFurnaceTileEntity::new, ModBlocks.DEBUG_FURNACE.get()).build(null));
 }
