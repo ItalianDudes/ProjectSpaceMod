@@ -1,6 +1,7 @@
 package com.italiandudes.projectspace.util;
 
 import com.italiandudes.projectspace.ProjectSpace;
+import com.italiandudes.projectspace.client.gui.DebugChargerGUI;
 import com.italiandudes.projectspace.client.gui.DebugDisplayCaseGUI;
 import com.italiandudes.projectspace.client.tileEntityRenderer.DebugDisplayCaseTileEntityRenderer;
 import com.italiandudes.projectspace.init.ModContainerTypes;
@@ -22,6 +23,7 @@ public class ClientEventBusSubscriber {
         ModKeyBinds.register(event);
 
         ScreenManager.register(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(), DebugDisplayCaseGUI::new);
+        ScreenManager.register(ModContainerTypes.DEBUG_CHARGER_CONTAINER_TYPE.get(), DebugChargerGUI::new);
 
         ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE.get(), DebugDisplayCaseTileEntityRenderer::new);
     }

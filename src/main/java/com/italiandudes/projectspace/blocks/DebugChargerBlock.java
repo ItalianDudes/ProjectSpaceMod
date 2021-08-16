@@ -1,5 +1,6 @@
 package com.italiandudes.projectspace.blocks;
 
+import com.italiandudes.projectspace.init.ModTileEntityTypes;
 import com.italiandudes.projectspace.tileEntity.DebugChargerTileEntity;
 import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
 import net.minecraft.block.AbstractBlock;
@@ -34,7 +35,7 @@ public class DebugChargerBlock extends Block {
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return super.createTileEntity(state, world);
+        return ModTileEntityTypes.DEBUG_CHARGER_TILE_ENTITY_TYPE.get().create();
     }
 
     @SuppressWarnings("deprecation")

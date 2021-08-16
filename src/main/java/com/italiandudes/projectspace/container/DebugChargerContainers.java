@@ -2,6 +2,7 @@ package com.italiandudes.projectspace.container;
 
 import com.italiandudes.projectspace.init.ModBlocks;
 import com.italiandudes.projectspace.init.ModContainerTypes;
+import com.italiandudes.projectspace.items.DebugBattery;
 import com.italiandudes.projectspace.tileEntity.DebugChargerTileEntity;
 import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,6 +42,12 @@ public class DebugChargerContainers extends Container {
         for(int col=0;col<9;col++){
             this.addSlot(new Slot(playerInv,col,8+col*18,142));
         }
+
+        //It should check whether the battery can be charged:
+        //if it can, then it charges it.
+        /*if(te.isCharging(getSlot(0).getItem().getItem())){
+            te.charging((DebugBattery) getSlot(0).getItem().getItem());
+        }*/
     }
 
     public DebugChargerContainers(final int windowId, final PlayerInventory playerInv, final PacketBuffer data){

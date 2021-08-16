@@ -2,12 +2,16 @@ package com.italiandudes.projectspace.tileEntity;
 
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.container.DebugChargerContainers;
-import com.italiandudes.projectspace.container.DebugDisplayCaseContainers;
+import com.italiandudes.projectspace.init.ModItems;
 import com.italiandudes.projectspace.init.ModTileEntityTypes;
+import com.italiandudes.projectspace.items.DebugBattery;
+import com.italiandudes.projectspace.util.utilityClasses.EnergyManagement;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.LockableLootTileEntity;
@@ -18,6 +22,8 @@ import net.minecraft.util.text.TranslationTextComponent;
 
 public class DebugChargerTileEntity extends LockableLootTileEntity {
 
+    private final double maxCharge = 20000.0; //maximum charge that can be stored.
+    private final double charge = 20000.0; //actual charge.
     public static int slots = 1;
     protected NonNullList<ItemStack> items = NonNullList.withSize(slots,ItemStack.EMPTY);
 
@@ -25,7 +31,7 @@ public class DebugChargerTileEntity extends LockableLootTileEntity {
 
     @Override
     protected ITextComponent getDefaultName() {
-        return new TranslationTextComponent("container."+ ProjectSpace.MOD_ID + ".debug_cherger");
+        return new TranslationTextComponent("container."+ ProjectSpace.MOD_ID + ".debug_charger");
     }
 
     @Override
@@ -72,5 +78,20 @@ public class DebugChargerTileEntity extends LockableLootTileEntity {
         if (this.tryLoadLootTable(nbt)){
             ItemStackHelper.loadAllItems(nbt,this.items);
         }
+    }
+
+    //Logic section:
+    public boolean isCharging(Item item){
+
+        if(item == ModItems.DEBUG_BATTERY.get()){
+            DebugBattery dBattery = (DebugBattery) item;
+            return dBattery.getCharge() < dBattery.getMaxBatteryPower();
+        }
+
+        return false;
+    }
+
+    public void charging(DebugBattery dBattery){
+        dBattery.chargeIncrease(this.charge);
     }
 }

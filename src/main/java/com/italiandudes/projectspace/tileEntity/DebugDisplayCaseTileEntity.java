@@ -22,8 +22,6 @@ import net.minecraftforge.fml.common.Mod;
 //This class manages the TileEntity "DisplayCase".
 public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
 
-    private final int maxCharge = 20000;
-    private int charge = 20000;
     public static int slots = 1;
     protected NonNullList<ItemStack> items = NonNullList.withSize(slots,ItemStack.EMPTY);
 
@@ -80,15 +78,5 @@ public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
         if (this.tryLoadLootTable(nbt)){
             ItemStackHelper.loadAllItems(nbt,this.items);
         }
-    }
-
-    //Logic section:
-    public boolean isCharging(DebugBattery dBattery){
-        return (dBattery.getCharge() < dBattery.getMaxBatteryPower()) && charge > 0;
-    }
-
-    public void charging(DebugBattery dBattery){
-        dBattery.setCharge(dBattery.getMaxBatteryPower());
-
     }
 }
