@@ -1,11 +1,14 @@
 package com.italiandudes.projectspace.tileEntity;
 
 import com.italiandudes.projectspace.ProjectSpace;
+import com.italiandudes.projectspace.init.ModItems;
 import com.italiandudes.projectspace.init.ModTileEntityTypes;
+import com.italiandudes.projectspace.items.DebugBattery;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.LockableLootTileEntity;
@@ -14,10 +17,13 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import com.italiandudes.projectspace.container.DebugDisplayCaseContainers;
+import net.minecraftforge.fml.common.Mod;
 
 //This class manages the TileEntity "DisplayCase".
 public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
 
+    private final int maxCharge = 20000;
+    private int charge = 20000;
     public static int slots = 1;
     protected NonNullList<ItemStack> items = NonNullList.withSize(slots,ItemStack.EMPTY);
 
@@ -74,5 +80,15 @@ public class DebugDisplayCaseTileEntity extends LockableLootTileEntity {
         if (this.tryLoadLootTable(nbt)){
             ItemStackHelper.loadAllItems(nbt,this.items);
         }
+    }
+
+    //Logic section:
+    public boolean isCharging(DebugBattery dBattery){
+        return (dBattery.getCharge() < dBattery.getMaxBatteryPower()) && charge > 0;
+    }
+
+    public void charging(DebugBattery dBattery){
+        dBattery.setCharge(dBattery.getMaxBatteryPower());
+
     }
 }

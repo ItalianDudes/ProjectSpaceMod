@@ -41,14 +41,14 @@ public class DebugDisplayCaseGUI extends ContainerScreen<DebugDisplayCaseContain
     @Override
     protected void renderTooltip(MatrixStack matrixStack, int x, int y) {
         this.font.draw(matrixStack,this.inventory.getDisplayName(),(float) this.inventoryLabelX, (float) this.inventoryLabelY,
-                4210752);
+                4210752); //This last number is the color "code" for Minecraft's GUI texts.
     }
 
     //This method renders the actual GUI.
     @SuppressWarnings("deprecation")
     @Override
     protected void renderBg(MatrixStack matrixStack, float partialTick, int mouseX, int mouseY) {
-        RenderSystem.color4f(1f,1f,1f,1f);
+        RenderSystem.color4f(1f,1f,1f,1f); //This is a completely white color.
         Objects.requireNonNull(this.minecraft).textureManager.bind(DEBUG_DISPLAY_CASE_GUI);
         int x = (this.width - this.getXSize())/2;
         int y = (this.height - this.getYSize())/2;

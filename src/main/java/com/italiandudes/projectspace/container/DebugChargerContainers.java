@@ -2,8 +2,8 @@ package com.italiandudes.projectspace.container;
 
 import com.italiandudes.projectspace.init.ModBlocks;
 import com.italiandudes.projectspace.init.ModContainerTypes;
+import com.italiandudes.projectspace.tileEntity.DebugChargerTileEntity;
 import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
-import com.italiandudes.projectspace.tileEntity.DebugFurnaceTileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
@@ -16,17 +16,18 @@ import net.minecraft.util.IWorldPosCallable;
 
 import java.util.Objects;
 
-public class DebugFurnaceContainers extends Container {
+public class DebugChargerContainers extends Container {
 
-    public final DebugFurnaceTileEntity te;
+    public final DebugChargerTileEntity te;
     private final IWorldPosCallable canInteractWithCallable;
 
-    public DebugFurnaceContainers(final int windowId, final PlayerInventory playerInv, final DebugFurnaceTileEntity te){
+    public DebugChargerContainers(final int windowId, final PlayerInventory playerInv, final DebugChargerTileEntity te){
         super(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(),windowId);
         this.te = te;
         this.canInteractWithCallable = IWorldPosCallable.create(Objects.requireNonNull(te.getLevel()),te.getBlockPos());
 
-        //Actual GUI slots
+        //Actual GUI slots.
+        //Referenced te, slotId, X, Y
         this.addSlot(new Slot((IInventory) te,0,80,35));
 
         //Main Player Inventory
@@ -42,23 +43,23 @@ public class DebugFurnaceContainers extends Container {
         }
     }
 
-    public DebugFurnaceContainers(final int windowId, final PlayerInventory playerInv, final PacketBuffer data){
+    public DebugChargerContainers(final int windowId, final PlayerInventory playerInv, final PacketBuffer data){
         this(windowId,playerInv,getTileEntity(playerInv,data));
     }
 
-    private static DebugFurnaceTileEntity getTileEntity(final PlayerInventory playerInventory, final PacketBuffer data){
+    private static DebugChargerTileEntity getTileEntity(final PlayerInventory playerInventory, final PacketBuffer data){
         Objects.requireNonNull(playerInventory, "Player Inventory cannot be null.");
         Objects.requireNonNull(data,"Packet Buffer cannot be null.");
         final TileEntity te = playerInventory.player.level.getBlockEntity(data.readBlockPos());
-        if (te instanceof DebugFurnaceTileEntity){
-            return (DebugFurnaceTileEntity) te;
+        if (te instanceof DebugChargerTileEntity){
+            return (DebugChargerTileEntity) te;
         }
         throw new IllegalStateException("Tile Entity Is Not Correct");
     }
 
     @Override
     public boolean stillValid(PlayerEntity playerIn) {
-        return stillValid(canInteractWithCallable,playerIn, ModBlocks.DEBUG_DISPLAY_CASE.get());
+        return stillValid(canInteractWithCallable,playerIn, ModBlocks.DEBUG_CHARGER.get());
     }
 
     @Override
@@ -68,11 +69,11 @@ public class DebugFurnaceContainers extends Container {
         if (slot!=null && slot.hasItem()){
             ItemStack stack1 = slot.getItem();
             stack = stack1.copy();
-            if(index < DebugFurnaceTileEntity.slots
-                    && !this.moveItemStackTo(stack1, DebugFurnaceTileEntity.slots,this.slots.size(),true)){
+            if(index < DebugChargerTileEntity.slots
+                    && !this.moveItemStackTo(stack1, DebugChargerTileEntity.slots,this.slots.size(),true)){
                 return ItemStack.EMPTY;
             }
-            if(!this.moveItemStackTo(stack1,0, DebugFurnaceTileEntity.slots,false)){
+            if(!this.moveItemStackTo(stack1,0, DebugChargerTileEntity.slots,false)){
                 return ItemStack.EMPTY;
             }
 

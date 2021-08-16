@@ -1,8 +1,8 @@
 package com.italiandudes.projectspace.tileEntity;
 
 import com.italiandudes.projectspace.ProjectSpace;
+import com.italiandudes.projectspace.container.DebugChargerContainers;
 import com.italiandudes.projectspace.container.DebugDisplayCaseContainers;
-import com.italiandudes.projectspace.container.DebugFurnaceContainers;
 import com.italiandudes.projectspace.init.ModTileEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
@@ -16,22 +16,21 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 
-public class DebugFurnaceTileEntity extends LockableLootTileEntity {
+public class DebugChargerTileEntity extends LockableLootTileEntity {
 
     public static int slots = 1;
     protected NonNullList<ItemStack> items = NonNullList.withSize(slots,ItemStack.EMPTY);
 
-    protected DebugFurnaceTileEntity(TileEntityType<?> typeIn) {
-        super(typeIn);
-    }
+    protected DebugChargerTileEntity(TileEntityType<?> typeIn){super(typeIn);}
 
+    @Override
     protected ITextComponent getDefaultName() {
-        return new TranslationTextComponent("container."+ ProjectSpace.MOD_ID + ".debug_furnace");
+        return new TranslationTextComponent("container."+ ProjectSpace.MOD_ID + ".debug_cherger");
     }
 
     @Override
     protected Container createMenu(int id, PlayerInventory player) {
-        return new DebugFurnaceContainers(id,player,this);
+        return new DebugChargerContainers(id,player,this);
     }
 
     @Override
@@ -48,8 +47,8 @@ public class DebugFurnaceTileEntity extends LockableLootTileEntity {
         this.items = itemsIn;
     }
 
-    public DebugFurnaceTileEntity(){
-        this(ModTileEntityTypes.DEBUG_DISPLAY_CASE_TILE_ENTITY_TYPE.get());
+    public DebugChargerTileEntity(){
+        this(ModTileEntityTypes.DEBUG_CHARGER_TILE_ENTITY_TYPE.get());
     }
 
     @Override

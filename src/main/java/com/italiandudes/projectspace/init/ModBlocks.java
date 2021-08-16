@@ -18,7 +18,7 @@ public class ModBlocks {
     //Under here are listed all the blocks.
     public static final RegistryObject<Block> DEBUG_QUARRY = BLOCKS.register("debug_quarry", DebugQuarryBlock::new);
     public static final RegistryObject<Block> DEBUG_DISPLAY_CASE = BLOCKS.register("debug_display_case", DebugDisplayCaseBlock::new);
-    public static final RegistryObject<Block> DEBUG_FURNACE = BLOCKS.register("debug_furnace", DebugFurnaceBlock::new);
+    public static final RegistryObject<Block> DEBUG_CHARGER = BLOCKS.register("debug_furnace", DebugChargerBlock::new);
     public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", CopperOre::new);
     public static final RegistryObject<Block> LEAD_ORE = BLOCKS.register("lead_ore", LeadOre::new);
     public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", TinOre::new);
