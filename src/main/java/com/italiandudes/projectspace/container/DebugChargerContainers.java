@@ -4,7 +4,6 @@ import com.italiandudes.projectspace.init.ModBlocks;
 import com.italiandudes.projectspace.init.ModContainerTypes;
 import com.italiandudes.projectspace.items.DebugBattery;
 import com.italiandudes.projectspace.tileEntity.DebugChargerTileEntity;
-import com.italiandudes.projectspace.tileEntity.DebugDisplayCaseTileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
@@ -23,13 +22,13 @@ public class DebugChargerContainers extends Container {
     private final IWorldPosCallable canInteractWithCallable;
 
     public DebugChargerContainers(final int windowId, final PlayerInventory playerInv, final DebugChargerTileEntity te){
-        super(ModContainerTypes.DEBUG_DISPLAY_CASE_CONTAINERS_TYPE.get(),windowId);
+        super(ModContainerTypes.DEBUG_CHARGER_CONTAINER_TYPE.get(),windowId);
         this.te = te;
         this.canInteractWithCallable = IWorldPosCallable.create(Objects.requireNonNull(te.getLevel()),te.getBlockPos());
 
         //Actual GUI slots.
         //Referenced te, slotId, X, Y
-        this.addSlot(new Slot((IInventory) te,0,80,35));
+        this.addSlot(new Slot((IInventory) te,0,62,34));
 
         //Main Player Inventory
         for(int row=0; row<3; row++){
@@ -45,9 +44,9 @@ public class DebugChargerContainers extends Container {
 
         //It should check whether the battery can be charged:
         //if it can, then it charges it.
-        /*if(te.isCharging(getSlot(0).getItem().getItem())){
+        if(te.isCharging(getSlot(0).getItem().getItem())){
             te.charging((DebugBattery) getSlot(0).getItem().getItem());
-        }*/
+        }
     }
 
     public DebugChargerContainers(final int windowId, final PlayerInventory playerInv, final PacketBuffer data){

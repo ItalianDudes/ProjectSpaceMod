@@ -3,38 +3,38 @@ package com.italiandudes.projectspace.util.utilityClasses;
 //This class manages the energy used in the mod.
 public class EnergyManagement {
 
-    private int volt=0;
-    private int ampere=0;
-    private int watt=0;
+    private double volt=0.0;
+    private double ampere=0.0;
+    private double watt=0.0;
 
-    public int calculateWatt(int volt, int ampere){
+    public double calculateWatt(double volt, double ampere){
         watt=volt*ampere;
         return watt;
     }
 
     //setters
-    public void setVolt(int volt) {
+    public void setVolt(double volt) {
         this.volt = volt;
     }
 
-    public void setAmpere(int ampere) {
+    public void setAmpere(double ampere) {
         this.ampere = ampere;
     }
 
-    public void setWatt(int watt) {
+    public void setWatt(double watt) {
         this.watt = watt;
     }
 
     //getters
-    public int getVolt() {
+    public double getVolt() {
         return volt;
     }
 
-    public int getAmpere() {
+    public double getAmpere() {
         return ampere;
     }
 
-    public int getWatt() {
+    public double getWatt() {
         return watt;
     }
 }

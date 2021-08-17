@@ -22,7 +22,9 @@
   "item.projectspace.glass_fiber": "Fibra di vetro",
   "item.projectspace.sulfur_dust": "Polvere di zolfo",
 
-  "block.projectspace.debug_quarry": "Quarry",
+  "block.projectspace.debug_quarry": "Quarry di debug",
+  "block.projectspace.debug_charger": "Caricatore di debug",
+  "block.projectspace.debug_display_case": "Vetrina di debug",
   "block.projectspace.bauxite_ore": "Minerale di bauxite",
   "block.projectspace.copper_ore": "Minerale di rame",
   "block.projectspace.lead_ore": "Minerale di piombo",
@@ -41,6 +43,7 @@
   "itemGroup.projectSpaceResources": "Risorse Project Space",
 
   "container.projectspace.debug_display_case": "Vetrina di debug",
+  "container.projectspace.debug_charger": "Caricatore di debug",
 
   "key.category.projectspace": "Project Space",
   "key.projectspace.example_key": "Example Key"

@@ -14,7 +14,7 @@ import java.util.Objects;
 
 public class DebugChargerGUI extends ContainerScreen<DebugChargerContainers> {
 
-    private static final ResourceLocation DEBUG_CHARGER_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_display_case.png");
+    private static final ResourceLocation DEBUG_CHARGER_GUI = new ResourceLocation(ProjectSpace.MOD_ID,"textures/gui/debug_charger.png");
 
     public DebugChargerGUI(DebugChargerContainers screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);

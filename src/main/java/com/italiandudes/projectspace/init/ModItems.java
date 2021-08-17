@@ -45,6 +45,8 @@ public class ModItems {
 
     //Under here are listed all the block items.
     public static final RegistryObject<Item> DEBUG_QUARRY_BLOCK_ITEM = ITEMS.register("debug_quarry", () -> new BlockItemBase(ModBlocks.DEBUG_QUARRY.get()));
+    public static final RegistryObject<Item> DEBUG_CHARGER_BLOCK_ITEM = ITEMS.register("debug_charger", () -> new BlockItemBase(ModBlocks.DEBUG_CHARGER.get()));
+    public static final RegistryObject<Item> DEBUG_DISPLAY_CASE_BLOCK_ITEM = ITEMS.register("debug_display_case",() -> new BlockItemBase(ModBlocks.DEBUG_DISPLAY_CASE.get()));
     public static final RegistryObject<Item> BAUXITE_ORE_ITEM = ITEMS.register("bauxite_ore",()->new BauxiteBase(ModBlocks.BAUXITE_ORE.get()));
     public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("copper_ore",()->new CopperBase(ModBlocks.COPPER_ORE.get()));
     public static final RegistryObject<Item> LEAD_ORE_ITEM = ITEMS.register("lead_ore",()->new LeadBase(ModBlocks.LEAD_ORE.get()));

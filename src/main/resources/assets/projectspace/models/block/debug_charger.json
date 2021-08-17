@@ -1,0 +1,11 @@
+{
+  "parent": "block/bedrock",
+  "textures": {
+    "up": "projectspace:blocks/debug_charger_top_bottom",
+    "down": "projectspace:blocks/debug_charger_top_bottom",
+    "south": "projectspace:blocks/debug_charger_side",
+    "north": "projectspace:blocks/debug_charger_side",
+    "west": "projectspace:blocks/debug_charger_side",
+    "east": "projectspace:blocks/debug_charger_side"
+  }
+}

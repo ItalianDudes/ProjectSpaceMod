@@ -23,6 +23,8 @@
   "item.projectspace.sulfur_dust": "Sulfur Dust",
 
   "block.projectspace.debug_quarry": "Debug Quarry",
+  "block.projectspace.debug_charger": "Debug Charger",
+  "block.projectspace.debug_display_case": "Debug Display Case",
   "block.projectspace.bauxite_ore": "Bauxite Ore",
   "block.projectspace.copper_ore": "Copper Ore",
   "block.projectspace.lead_ore": "Lead Ore",
@@ -41,6 +43,7 @@
   "itemGroup.projectSpaceResources": "Project Space Resources",
 
   "container.projectspace.debug_display_case": "Debug Display Case",
+  "container.projectspace.debug_charger": "Debug Charger",
 
   "key.category.projectspace": "Project Space",
   "key.projectspace.example_key": "Example Key"
