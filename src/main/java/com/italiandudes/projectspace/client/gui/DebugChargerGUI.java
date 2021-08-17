@@ -31,14 +31,6 @@ public class DebugChargerGUI extends ContainerScreen<DebugChargerContainers> {
     public void render(MatrixStack matrixStack, int mouseX, int mouseY, float partialTicks) {
         this.renderBackground(matrixStack);
         super.render(matrixStack, mouseX, mouseY, partialTicks);
-        this.renderTooltip(matrixStack,mouseX,mouseY);
-    }
-
-    //This method renders the words on the GUI.
-    @Override
-    protected void renderTooltip(MatrixStack matrixStack, int x, int y) {
-        this.font.draw(matrixStack,this.inventory.getDisplayName(),(float) this.inventoryLabelX, (float) this.inventoryLabelY,
-                4210752); //This last number is the color "code" for Minecraft's GUI texts.
     }
 
     //This method renders the actual GUI.
