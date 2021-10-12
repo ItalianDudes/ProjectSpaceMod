@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": {"model": "projectspace:block/debug_quarry"}
+    "": {"model": "projectspace:block/debug_test"}
   }
 }

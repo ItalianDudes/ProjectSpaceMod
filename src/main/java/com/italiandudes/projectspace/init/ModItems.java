@@ -58,7 +58,7 @@ public class ModItems {
     public static final RegistryObject<Item> TIN_BLOCK_ITEM = ITEMS.register("tin_block",()->new ResourcesItemBase(ModBlocks.TIN_BLOCK.get()));
     public static final RegistryObject<Item> URANIUM_BLOCK_ITEM = ITEMS.register("uranium_block",()->new ResourcesItemBase(ModBlocks.URANIUM_BLOCK.get()));
     public static final RegistryObject<Item> STEEL_BLOCK_ITEM = ITEMS.register("steel_block",()->new ResourcesItemBase(ModBlocks.STEEL_BLOCK.get()));
-    public static final RegistryObject<Item> DEBUG_BLOCK_MODEL_ITEM = ITEMS.register("debug_block_model", ()->new ResourcesItemBase(ModBlocks.DEBUG_BLOCK_MODEL.get()));
+    public static final RegistryObject<Item> DEBUG_BLOCK_MODEL_ITEM = ITEMS.register("debug_test", ()->new ResourcesItemBase(ModBlocks.DEBUG_BLOCK_MODEL.get()));
 
     //Under here are listed all the fluid buckets.
     public static final RegistryObject<BucketItem> DEBUG_BUCKET = ITEMS.register("debug_bucket",

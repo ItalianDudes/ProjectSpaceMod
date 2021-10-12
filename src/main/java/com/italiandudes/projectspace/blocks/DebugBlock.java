@@ -15,9 +15,9 @@ public class DebugBlock extends Block {
     public void setLoader(OBJLoader loader) {
         this.loader = loader;
         ResourceLocation location = new ResourceLocation(ProjectSpace.MOD_ID,"block/debug_test.obj");
-        String matLocation = new String("debug_test.mtl");
+        String matLocation = new String("block/debug_test.mtl");
 
-        loader.loadModel(new OBJModel.ModelSettings(location,true,true, false, true, matLocation));
+        loader.loadModel(new OBJModel.ModelSettings(location,true,true, false, true,matLocation));
     }
 
     public DebugBlock() {
