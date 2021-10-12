@@ -30,6 +30,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIN_BLOCK = BLOCKS.register("tin_block", TinBlock::new);
     public static final RegistryObject<Block> URANIUM_BLOCK = BLOCKS.register("uranium_block", UraniumBlock::new);
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", SteelBlock::new);
+    public static final RegistryObject<Block> DEBUG_BLOCK_MODEL = BLOCKS.register("debug_block_model", DebugBlock::new);
 
     //Under here are listed all the fluid's blocks.
     public static final RegistryObject<FlowingFluidBlock> DEBUG_BLOCK = BLOCKS.register("debug_fluid",
