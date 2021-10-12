@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "projectspace:debug_fluid",
+    "projectspace:debug_flowing"
+  ]
+}

@@ -3,6 +3,8 @@ package com.italiandudes.projectspace;
 import com.italiandudes.projectspace.config.ProjectSpaceConfig;
 import com.italiandudes.projectspace.init.*;
 import com.italiandudes.projectspace.network.ProjectSpaceNetwork;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeSerializer;
@@ -53,7 +55,12 @@ public class ProjectSpace
 
     private void setup(final FMLCommonSetupEvent event){}
 
-    private void doClientStuff(final FMLClientSetupEvent event) {}
+    private void doClientStuff(final FMLClientSetupEvent event) {
+        //Under here are listed all fluid's renders
+        RenderTypeLookup.setRenderLayer(ModFluids.DEBUG_FLUID.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.DEBUG_BLOCK.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModFluids.DEBUG_FLOWING.get(), RenderType.translucent());
+    }
 
     public void commonSetup(final FMLClientSetupEvent event){
         ProjectSpaceNetwork.init();

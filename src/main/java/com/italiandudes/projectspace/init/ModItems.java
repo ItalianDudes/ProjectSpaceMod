@@ -62,5 +62,6 @@ public class ModItems {
 
     //Under here are listed all the fluid buckets.
     public static final RegistryObject<BucketItem> DEBUG_BUCKET = ITEMS.register("debug_bucket",
-            () -> new BucketItem(() -> ModFluids.DEBUG_FLUID.get(), new Item.Properties().tab(ProjectSpace.TAB).stacksTo(1)));
+            () -> new BucketItem(() -> ModFluids.DEBUG_FLUID.get(),
+                    new Item.Properties().tab(ProjectSpace.TAB).stacksTo(1)));
 }

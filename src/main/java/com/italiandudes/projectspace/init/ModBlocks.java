@@ -3,6 +3,7 @@ package com.italiandudes.projectspace.init;
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.blocks.*;
 import com.italiandudes.projectspace.blocks.ores.*;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
@@ -34,5 +35,6 @@ public class ModBlocks {
 
     //Under here are listed all the fluid's blocks.
     public static final RegistryObject<FlowingFluidBlock> DEBUG_BLOCK = BLOCKS.register("debug_fluid",
-            () -> new FlowingFluidBlock(ModFluids.DEBUG_FLUID, Block.Properties.of(Material.WATER).instabreak().noDrops().strength(100.0f)));
+            () -> new FlowingFluidBlock(() -> ModFluids.DEBUG_FLUID.get(), AbstractBlock.Properties.of(Material.WATER).noCollission()
+                    .strength(100f).noDrops()));
 }
