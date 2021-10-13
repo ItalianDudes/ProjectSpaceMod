@@ -38,6 +38,6 @@ public class ModBlocks {
                     .strength(100f).noDrops()));
 
     //Under here are listed all the 3D's models.
-    public static final RegistryObject<Block> DEBUG_BLOCK_MODEL = BLOCKS.register("debug_test", DebugBlock::new);
+    public static final RegistryObject<Block> DEBUG_BLOCK_MODEL = BLOCKS.register("debug_model", DebugBlock::new);
 
 }

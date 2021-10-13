@@ -1,0 +1,5 @@
+{
+  "loader": "forge:obj",
+  "model": "projectspace:models/3dmodel/debug_model.obj",
+  "flip-v": true
+}

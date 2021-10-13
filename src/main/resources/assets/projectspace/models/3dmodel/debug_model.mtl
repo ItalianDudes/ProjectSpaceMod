@@ -2,7 +2,7 @@
 # Material Count: 1
 
 newmtl Material
-map_Kd projectspace:block/debug_test
+map_Kd debug_model
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.006018 0.014944

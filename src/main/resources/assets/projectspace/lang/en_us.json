@@ -36,6 +36,7 @@
   "block.projectspace.lead_block": "Block of Lead",
   "block.projectspace.uranium_block": "Block of Uranium",
   "block.projectspace.steel_block": "Block of Steel",
+  "block.projectspace.debug_model": "Debug Model",
 
   "fluid.projectspace.debug_fluid": "Debug Fluid",
 

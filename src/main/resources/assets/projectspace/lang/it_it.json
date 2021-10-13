@@ -36,6 +36,7 @@
   "block.projectspace.lead_block": "Blocco di piombo",
   "block.projectspace.uranium_block": "Blocco d'uranio",
   "block.projectspace.steel_block": "Blocco d'acciaio",
+  "block.projectspace.debug_model": "Modello di Debug",
 
   "fluid.projectspace.debug_fluid": "Fluido di debug",
 
