@@ -7,7 +7,6 @@ import net.minecraft.block.material.Material;
 public class DebugBlock extends Block {
 
     public DebugBlock() {
-        super(AbstractBlock.Properties.of(Material.METAL));
+        super(AbstractBlock.Properties.of(Material.METAL).noCollission());
     }
-
 }
