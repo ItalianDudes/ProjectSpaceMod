@@ -11,6 +11,7 @@ public class ModSoundEvents {
 
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ProjectSpace.MOD_ID);
 
+    //Short for register sounds. Sound names must have same name of their file.
     private static RegistryObject<SoundEvent> registerSoundEvent(String name){
         return SOUND_EVENTS.register(name, ()-> new SoundEvent(new ResourceLocation(ProjectSpace.MOD_ID,name)));
     }
