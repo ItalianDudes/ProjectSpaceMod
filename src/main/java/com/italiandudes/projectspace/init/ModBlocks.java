@@ -2,6 +2,7 @@ package com.italiandudes.projectspace.init;
 
 import com.italiandudes.projectspace.ProjectSpace;
 import com.italiandudes.projectspace.blocks.*;
+import com.italiandudes.projectspace.blocks.energyContainers.DebugChargerBlock;
 import com.italiandudes.projectspace.blocks.ores.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;

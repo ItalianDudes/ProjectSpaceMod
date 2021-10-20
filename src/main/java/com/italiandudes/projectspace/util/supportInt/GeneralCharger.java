@@ -3,7 +3,7 @@ package com.italiandudes.projectspace.util.supportInt;
 public interface GeneralCharger extends EnergyManagement{
     double chargeRate=0.0;
 
-    //Inputs/Outputs
+    //Inputs/Outputs (DEFAULT INIZIALIZATION)
     boolean primaryInput=false;         //Cable
     boolean secondaryInput=false;       //Item
     boolean primaryOutput=false;        //Item

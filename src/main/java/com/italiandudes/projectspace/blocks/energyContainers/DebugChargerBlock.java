@@ -1,4 +1,4 @@
-package com.italiandudes.projectspace.blocks;
+package com.italiandudes.projectspace.blocks.energyContainers;
 
 import com.italiandudes.projectspace.init.ModTileEntityTypes;
 import com.italiandudes.projectspace.tileEntity.DebugChargerTileEntity;
