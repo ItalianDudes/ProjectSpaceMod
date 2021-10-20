@@ -1,0 +1,9 @@
+{
+  "debug_sound": {
+    "category": "blocks",
+    "subtitle": "projectspace.debug_sound",
+    "sounds": [
+      "projectspace:debug_sound"
+    ]
+  }
+}
