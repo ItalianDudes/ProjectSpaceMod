@@ -5,5 +5,5 @@ public interface EnergyManagement {
     double ampere=0.0;
     double watt=0.0;
 
-    double calculateWatt(double volt, double ampere);   //Calcola watt
+    double calculateWatt(double volt, double ampere);
 }
