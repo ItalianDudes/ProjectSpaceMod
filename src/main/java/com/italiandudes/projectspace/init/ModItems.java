@@ -6,6 +6,7 @@ import com.italiandudes.projectspace.items.CarbonFiber;
 import com.italiandudes.projectspace.items.DebugBattery;
 import com.italiandudes.projectspace.items.GlassFiber;
 import com.italiandudes.projectspace.items.SulfurDust;
+import com.italiandudes.projectspace.items.energyContainer.BasicBattery;
 import com.italiandudes.projectspace.items.ingots.*;
 import com.italiandudes.projectspace.items.nuggets.*;
 import com.italiandudes.projectspace.items.piles.*;
@@ -42,6 +43,7 @@ public class ModItems {
     public static final RegistryObject<Item> CARBON_FIBER = ITEMS.register("carbon_fiber", CarbonFiber::new);
     public static final RegistryObject<Item> GLASS_FIBER = ITEMS.register("glass_fiber", GlassFiber::new);
     public static final RegistryObject<Item> SULFUR_DUST = ITEMS.register("sulfur_dust", SulfurDust::new);
+    public static final RegistryObject<Item> BASIC_BATTERY = ITEMS.register("basic_battery", BasicBattery::new);
 
     //Under here are listed all the block items.
     public static final RegistryObject<Item> DEBUG_QUARRY_BLOCK_ITEM = ITEMS.register("debug_quarry", () -> new BlockItemBase(ModBlocks.DEBUG_QUARRY.get()));
