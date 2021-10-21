@@ -2,16 +2,13 @@ package com.italiandudes.projectspace.energy;
 
 import net.minecraft.item.Item;
 
-public class GenericEnergyItem extends Item {
-    private double capacity=0.0; //Max capacity of the item.
-    private double dischargeRate=0.0; //Discharge rate of the item (usually it's the same value of chargeRate).
-    private double chargeRate=0.0; //Charge rate of the item (usually it's the same value of dischargeRate).
-    private double actualCharge=0.0; //Actual charge of the item.
+import java.awt.*;
 
-
-    public GenericEnergyItem(Properties properties) {
-        super(properties);
-    }
+public class GenericEnergyBlock extends Container {
+    private double capacity=0.0; //Max capacity of the block.
+    private double dischargeRate=0.0; //Discharge rate of the block (usually it's the same value of chargeRate).
+    private double chargeRate=0.0; //Charge rate of the block (usually it's the same value of dischargeRate).
+    private double actualCharge=0.0; //Actual charge of the block.
 
     //Utility.
     public void increaseCharge(double amount){
