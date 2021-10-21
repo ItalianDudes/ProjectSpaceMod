@@ -21,6 +21,7 @@
   "item.projectspace.carbon_fiber": "Carbon Fiber",
   "item.projectspace.glass_fiber": "Glass Fiber",
   "item.projectspace.sulfur_dust": "Sulfur Dust",
+  "item.projectspace.basic_battery": "Basic Battery",
 
   "block.projectspace.debug_quarry": "Debug Quarry",
   "block.projectspace.debug_charger": "Debug Charger",
@@ -42,6 +43,7 @@
 
   "itemGroup.projectSpace": "Project Space",
   "itemGroup.projectSpaceResources": "Project Space Resources",
+  "itemGroup.projectSpaceEnergy": "Project Space Energy",
 
   "container.projectspace.debug_display_case": "Debug Display Case",
   "container.projectspace.debug_charger": "Debug Charger",

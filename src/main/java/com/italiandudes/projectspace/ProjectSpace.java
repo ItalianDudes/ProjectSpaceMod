@@ -81,6 +81,13 @@ public class ProjectSpace
         }
     };
 
+    public static final ItemGroup ENERGY_TAB = new ItemGroup("projectSpaceEnergy") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.BASIC_BATTERY.get());
+        }
+    };
+
     //The commands are registered here.
     @SubscribeEvent
     public void onCommandRegister(final RegisterCommandsEvent event){

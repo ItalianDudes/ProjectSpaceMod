@@ -21,6 +21,7 @@
   "item.projectspace.carbon_fiber": "Fibra di carbonio",
   "item.projectspace.glass_fiber": "Fibra di vetro",
   "item.projectspace.sulfur_dust": "Polvere di zolfo",
+  "item.projectspace.basic_battery": "Batteria di base",
 
   "block.projectspace.debug_quarry": "Quarry di debug",
   "block.projectspace.debug_charger": "Caricatore di debug",
@@ -36,12 +37,13 @@
   "block.projectspace.lead_block": "Blocco di piombo",
   "block.projectspace.uranium_block": "Blocco d'uranio",
   "block.projectspace.steel_block": "Blocco d'acciaio",
-  "block.projectspace.debug_model": "Modello di Debug",
+  "block.projectspace.debug_model": "Modello di debug",
 
   "fluid.projectspace.debug_fluid": "Fluido di debug",
 
   "itemGroup.projectSpace": "Project Space",
   "itemGroup.projectSpaceResources": "Risorse Project Space",
+  "itemGroup.projectSpaceEnergy": "Energia Project Space",
 
   "container.projectspace.debug_display_case": "Vetrina di debug",
   "container.projectspace.debug_charger": "Caricatore di debug",
