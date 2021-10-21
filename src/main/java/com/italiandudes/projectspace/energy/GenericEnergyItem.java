@@ -8,6 +8,7 @@ public class GenericEnergyItem extends Item {
     private double chargeRate=0.0; //Charge rate of the battery (usually it's the same value of dischargeRate).
     private double actualCharge=0.0; //Actual charge of the battery.
 
+
     public GenericEnergyItem(Properties properties) {
         super(properties);
     }
@@ -48,5 +49,17 @@ public class GenericEnergyItem extends Item {
 
     public void setDischargeRate(double dischargeRate){
         this.dischargeRate=dischargeRate;
+    }
+
+    public void decreaseActualCharge(double amount){
+        while(amount>0){
+            if(actualCharge>=dischargeRate) {
+                actualCharge -= dischargeRate;
+                amount -= dischargeRate;
+            }else{
+                actualCharge=0.0;
+                amount=0.0;
+            }
+        }
     }
 }
