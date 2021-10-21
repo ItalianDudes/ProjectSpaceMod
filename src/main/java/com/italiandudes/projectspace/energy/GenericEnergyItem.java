@@ -13,6 +13,7 @@ public class GenericEnergyItem extends Item {
         super(properties);
     }
 
+    //Utility.
     public void increase(double amount){
 
         if(amount>chargeRate){
@@ -36,6 +37,18 @@ public class GenericEnergyItem extends Item {
             }
         }else{
             actualCharge+=amount;
+        }
+    }
+
+    public void decreaseActualCharge(double amount){
+        while(amount>0){
+            if(actualCharge>=dischargeRate) {
+                actualCharge -= dischargeRate;
+                amount -= dischargeRate;
+            }else{
+                actualCharge=0.0;
+                amount=0.0;
+            }
         }
     }
 
@@ -75,17 +88,5 @@ public class GenericEnergyItem extends Item {
 
     public void setDischargeRate(double dischargeRate){
         this.dischargeRate=dischargeRate;
-    }
-
-    public void decreaseActualCharge(double amount){
-        while(amount>0){
-            if(actualCharge>=dischargeRate) {
-                actualCharge -= dischargeRate;
-                amount -= dischargeRate;
-            }else{
-                actualCharge=0.0;
-                amount=0.0;
-            }
-        }
     }
 }
