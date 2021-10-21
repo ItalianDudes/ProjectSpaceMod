@@ -12,6 +12,32 @@ public class GenericEnergyItem extends Item {
         super(properties);
     }
 
+    public void increase(double amount){
+
+        if(amount>chargeRate){
+            while(amount>0){
+                if(actualCharge+chargeRate<capacity){
+                    if(amount>=chargeRate) {
+                        actualCharge += chargeRate;
+                        amount-=chargeRate;
+                    }else{
+                        actualCharge+=amount;
+                        amount=0.0;
+                    }
+                }else{
+                    if(amount<chargeRate){
+                        actualCharge+=amount;
+                    }else{
+                        actualCharge=capacity;
+                    }
+                    amount=0.0;
+                }
+            }
+        }else{
+            actualCharge+=amount;
+        }
+    }
+
     //Getters
     public double getActualCharge() {
         return actualCharge;
