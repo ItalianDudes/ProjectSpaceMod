@@ -1,3 +1,4 @@
+/*
 package com.italiandudes.projectspace.energy;
 
 import net.minecraft.block.Block;
@@ -46,3 +47,4 @@ public abstract class GenericEnergyCable extends Block implements {
         isConnectedRight=!isConnectedRight;
     }
 }
+ */
